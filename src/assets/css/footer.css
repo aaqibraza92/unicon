@@ -1,0 +1,17 @@
+footer {
+    background: #0E1B2C;
+    padding-top: 60px;
+  }
+  .itemLightwhite{
+    color:#c2c6ca ;
+  }
+  a.itemLightwhite:hover{
+    color:#87A80D;
+  }
+  .socailMedia li a:hover path{
+    fill:#87A80D !important;
+  }
+  .copyright {
+    border-top: 1px solid #323d4c;
+    padding: 10px 0;
+  }

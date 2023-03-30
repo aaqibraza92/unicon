@@ -5,10 +5,10 @@
   --colorLightOrange: #f9f7f7;
   --colorOrange: #ec7523;
   --colorRed: #ff5757;
-  --colorGreen: #47c085;
+  --colorGreen: #87A80D;
   --colorYellow: yellow;
-  --colorPara: #54595C;
-  --colorBlue:#47BBD0;
+  --colorPara: #1B2B40BF;
+  --colorBlue:#004474;
 }
 
 body .colorBlack {
@@ -19,6 +19,12 @@ body .colorBlack {
 }
 .bgBlack {
   background: var(--colorBlack);
+}
+.bgBlue {
+  background: var(--colorBlue) !important;
+}
+.bgGreen {
+  background: var(--colorGreen) !important;
 }
 body .bgWhite {
   background: #fff;

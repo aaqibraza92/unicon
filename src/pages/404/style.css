@@ -108,13 +108,9 @@
       box-sizing: border-box;
   }
   body {
-    background-color: #FDFAF5;
-    margin-bottom: 50px;
+    background-color: #Fff;
   }
-  html, button, input, select, textarea {
-      font-family: 'Montserrat', Helvetica, sans-serif;
-      color: #bbb;
-  }
+
   h1 {
     text-align: center;
     margin: 30px 15px;

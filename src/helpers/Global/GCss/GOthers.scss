@@ -45,12 +45,17 @@ textarea::placeholder {
 }
 .btnTheme {
   background: #000;
-  padding: 14px 30px;
-  border-radius: 7px;
+  padding: 12px 30px 12px 30px;
+  -webkit-border-radius: 37px;
+  border-radius: 37px;
   color: #fff;
   text-decoration: none;
   border: none;
   line-height: 18px;
+  font-size: 14px;
+}
+.btnTheme:hover {
+  color: #fff;
 }
 .zIndex1{
     z-index: 1;
@@ -237,3 +242,4 @@ animation-direction: normal;
     border: none;
       border-bottom-width: medium;
   }
+ 

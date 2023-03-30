@@ -1,5 +1,6 @@
 const Img = {
-  logo: require("./logo.png"),
+  footer: require("./logo.png"),
+  areaBg:  require("../img/area_bg.jpg")
 };
 
 export default Img;

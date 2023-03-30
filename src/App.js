@@ -1,6 +1,7 @@
 
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./helpers/Global/GCss/index";
 import { Route, Routes } from 'react-router-dom';
 import RouterList from './helpers/Routes/RoutesList';
 

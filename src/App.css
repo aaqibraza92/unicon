@@ -1,0 +1,25 @@
+@font-face {
+    font-family: ax_medium;
+    src: url(./assets/fonts/Axiforma-Medium.ttf);
+  }
+  .fMedium{
+    font-family: ax_medium ;
+  }
+  @font-face {
+    font-family: ax_regular;
+    src: url(./assets/fonts/Axiforma-Regular.woff);
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: ax_bold;
+    src: url(./assets/fonts/Axiforma-Bold.ttf);
+  }
+  .fRegular{
+    font-family: ax_regular ;
+  }
+  .fBold{
+    font-family: ax_bold ;
+  }
+  body,html,li,a,p,div{
+    font-family: ax_regular ;
+  }

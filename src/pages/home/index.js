@@ -1,16 +1,23 @@
 import React from 'react'
-import { Container } from 'reactstrap'
+import HomeBanner from './HomeBanner'
+import PractiseAreas from './PractiseAreas'
+import '../../assets/css/home.css'
+import WhatWeDo from './WhatWeDo'
+import WhyChosseUs from './WhyChosseUs'
+import Testomonial from './Testomonial'
 
 const HomePage = () => {
   return (
+    <>
     <main>
-    <Container>
-    <h1>
-        Home page
-      </h1>
-    </Container>
-
+    <HomeBanner/>
+    <WhatWeDo/>
+    <PractiseAreas/>
+    <WhyChosseUs/>
+    <Testomonial/>
     </main>
+    </>
+
      
   )
 }

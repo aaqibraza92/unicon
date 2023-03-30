@@ -1,0 +1,10 @@
+  .wrapperArea {
+    background: #fff;
+    border: 2px solid transparent;
+    padding: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+  }
+  .wrapperArea:hover {
+    border-color: var(--colorGreen);
+  }
