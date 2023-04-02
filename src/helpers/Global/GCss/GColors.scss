@@ -5,7 +5,7 @@
   --colorLightOrange: #f9f7f7;
   --colorOrange: #ec7523;
   --colorRed: #ff5757;
-  --colorGreen: #87A80D;
+  --colorGreen: #87A80D; 
   --colorYellow: yellow;
   --colorPara: #1B2B40BF;
   --colorBlue:#004474;
@@ -52,6 +52,9 @@ body .bgWhite {
 }
 .colorGrey {
   color: var(--colorGrey);
+}
+.bgGrey{
+  background: #F6F6F7;
 }
 body .btnBlack {
   background: var(--colorBlack);

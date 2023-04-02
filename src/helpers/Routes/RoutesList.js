@@ -8,6 +8,11 @@ import HomePage from "../../pages/home";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import PageNotFound from "../../pages/404";
+import AboutUs from "../../pages/about";
+import WhatWeDoPage from "../../pages/What-we-do";
+import OurTeam from "../../pages/OurTeam";
+import SingleTeam from "../../pages/OurTeam/SingleTeam";
+import PreclinicalScientific from "../../pages/home/services/PreclinicalScientific";
 
 const GetRoute = ({ isprivate: isPrivate, page: Page, ...rest }) => {
 
@@ -43,6 +48,33 @@ let RouterList = [
     path: "/",
     isAdmin: false,
   },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={AboutUs} />,
+    path: "/about-us",
+    isAdmin: false,
+  },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={WhatWeDoPage} />,
+    path: "/what-we-do",
+    isAdmin: false,
+  },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={OurTeam} />,
+    path: "/our-team",
+    isAdmin: false,
+  },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={SingleTeam} />,
+    path: "/team/:slug",
+    isAdmin: false,
+  },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={PreclinicalScientific} />,
+    path: "/preclinical-scientific",
+    isAdmin: false,
+  },
+  
+
 
   {
     element: (
@@ -52,6 +84,7 @@ let RouterList = [
     isAdmin: false,
     
   },
+  
 ];
 
 export default RouterList;

@@ -5,6 +5,7 @@ import '../../assets/css/home.css'
 import WhatWeDo from './WhatWeDo'
 import WhyChosseUs from './WhyChosseUs'
 import Testomonial from './Testomonial'
+import Counter from './Counter'
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
     <PractiseAreas/>
     <WhyChosseUs/>
     <Testomonial/>
+    <Counter/>
     </main>
     </>
 

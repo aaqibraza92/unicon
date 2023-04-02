@@ -21,6 +21,12 @@ input {
   -o-border-radius: 8px;
   border-radius: 8px;
 }
+.radius20 {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+}
 .pointer {
   cursor: pointer;
 }
@@ -242,4 +248,6 @@ animation-direction: normal;
     border: none;
       border-bottom-width: medium;
   }
- 
+  .fontItalic {
+    font-style: italic;
+  }

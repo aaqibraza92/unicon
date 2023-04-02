@@ -35,8 +35,32 @@ export const checkSvg=<svg xmlns="http://www.w3.org/2000/svg" width="20" height=
 <path id="Icon_awesome-check-circle" data-name="Icon awesome-check-circle" d="M20.563,10.562a10,10,0,1,1-10-10A10,10,0,0,1,20.563,10.562ZM9.406,15.857l7.419-7.419a.645.645,0,0,0,0-.912l-.912-.912a.645.645,0,0,0-.912,0L8.95,12.664,6.125,9.839a.645.645,0,0,0-.912,0l-.912.912a.645.645,0,0,0,0,.912l4.194,4.194A.645.645,0,0,0,9.406,15.857Z" transform="translate(-0.563 -0.563)" fill="#87a80d"/>
 </svg>
 
+export const angleRight=<svg xmlns="http://www.w3.org/2000/svg" width="5.5" height="9.5" viewBox="0 0 5.5 9.5">
+<path id="Path_141" data-name="Path 141" d="M18,16.25a.75.75,0,0,1-.53-1.28l3.47-3.47L17.47,8.03A.75.75,0,0,1,18.53,6.97l4,4a.75.75,0,0,1,0,1.061l-4,4A.748.748,0,0,1,18,16.25Z" transform="translate(-17.25 -6.75)" fill="rgba(27,43,64,0.75)"/>
+</svg>
 
+export const linkdinIcon=<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+<g id="Group_113" data-name="Group 113" transform="translate(-185 -2504)">
+  <rect id="Rectangle_96" data-name="Rectangle 96" width="32" height="32" rx="8" transform="translate(185 2504)" fill="#026ba0"/>
+  <path id="Icon_awesome-linkedin-in" data-name="Icon awesome-linkedin-in" d="M3.582,16H.264V5.318H3.582ZM1.921,3.861A1.93,1.93,0,1,1,3.842,1.922,1.937,1.937,0,0,1,1.921,3.861ZM16,16h-3.31V10.8c0-1.239-.025-2.829-1.725-2.829-1.725,0-1.989,1.346-1.989,2.739V16H5.659V5.318H8.841V6.775h.046A3.486,3.486,0,0,1,12.026,5.05C15.383,5.05,16,7.261,16,10.133V16Z" transform="translate(193 2511.999)" fill="#fff"/>
+</g>
+</svg>
 
+export const mailIcon=<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+<g id="Group_115" data-name="Group 115" transform="translate(-223 -2504)">
+  <rect id="Rectangle_97" data-name="Rectangle 97" width="32" height="32" rx="8" transform="translate(223 2504)" fill="#cd4436"/>
+  <g id="Icon_ionic-ios-mail" data-name="Icon ionic-ios-mail" transform="translate(226.625 2505.894)">
+    <path id="Path_140" data-name="Path 140" d="M21.228,10.34l-4.656,4.742a.084.084,0,0,0,0,.121l3.258,3.47a.561.561,0,0,1,0,.8.564.564,0,0,1-.8,0l-3.245-3.457a.089.089,0,0,0-.125,0l-.792.8a3.484,3.484,0,0,1-2.484,1.047,3.554,3.554,0,0,1-2.536-1.077l-.762-.775a.089.089,0,0,0-.125,0L5.72,19.47a.564.564,0,0,1-.8,0,.561.561,0,0,1,0-.8L8.182,15.2a.092.092,0,0,0,0-.121L3.522,10.34a.085.085,0,0,0-.147.061V19.89a1.389,1.389,0,0,0,1.385,1.385H19.99a1.389,1.389,0,0,0,1.385-1.385V10.4A.087.087,0,0,0,21.228,10.34Z" transform="translate(0 -0.938)" fill="#fff"/>
+    <path id="Path_141" data-name="Path 141" d="M12.7,15.8a2.352,2.352,0,0,0,1.692-.71l6.789-6.91a1.36,1.36,0,0,0-.857-.3H5.082a1.351,1.351,0,0,0-.857.3l6.789,6.91A2.353,2.353,0,0,0,12.7,15.8Z" transform="translate(-0.327 0)" fill="#fff"/>
+  </g>
+</g>
+</svg>
 
+export const callIcon=<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+<g id="Group_116" data-name="Group 116" transform="translate(-261 -2504)">
+  <rect id="Rectangle_98" data-name="Rectangle 98" width="32" height="32" rx="8" transform="translate(261 2504)" fill="#55acee"/>
+  <path id="Icon_ionic-md-call" data-name="Icon ionic-md-call" d="M19.611,15.611a10.433,10.433,0,0,1-3.155-.489.831.831,0,0,0-.889.222L13.611,17.3a13.367,13.367,0,0,1-5.867-5.867L9.7,9.478a.926.926,0,0,0,.222-.889,9.667,9.667,0,0,1-.533-3.2A.892.892,0,0,0,8.5,4.5H5.389a.892.892,0,0,0-.889.889A15.1,15.1,0,0,0,19.611,20.5a.892.892,0,0,0,.889-.889V16.5A.892.892,0,0,0,19.611,15.611Z" transform="translate(264.5 2507.5)" fill="#fff"/>
+</g>
+</svg>
 
 

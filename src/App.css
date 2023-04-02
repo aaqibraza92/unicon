@@ -23,3 +23,31 @@
   body,html,li,a,p,div{
     font-family: ax_regular ;
   }
+.breadCrumb{
+  background: url('./assets/img/hero_img.jpg');
+}
+
+.bgGradient{
+background: #f1faf4; /* Old browsers */
+background: -moz-linear-gradient(left,  #f1faf4 0%, #f7f3f3 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #f1faf4 0%,#f7f3f3 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #f1faf4 0%,#f7f3f3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1faf4', endColorstr='#f7f3f3',GradientType=1 ); /* IE6-9 */
+
+}
+.teamImgWrp img {
+  border: 4px solid #fff;
+  border-radius: 16px;
+}
+.singleTeam {
+  height: 300px;
+}
+.singleTeam > .container {
+  margin-top: 150px;
+}
+a.line {
+  text-decoration: underline !important;
+}
+@media only screen and (max-width: 767px) {
+
+}
