@@ -13,6 +13,7 @@ import WhatWeDoPage from "../../pages/What-we-do";
 import OurTeam from "../../pages/OurTeam";
 import SingleTeam from "../../pages/OurTeam/SingleTeam";
 import PreclinicalScientific from "../../pages/home/services/PreclinicalScientific";
+import ContactUs from "../../pages/contact-us";
 
 const GetRoute = ({ isprivate: isPrivate, page: Page, ...rest }) => {
 
@@ -73,7 +74,11 @@ let RouterList = [
     path: "/preclinical-scientific",
     isAdmin: false,
   },
-  
+  {
+    element: <GetRoute isprivate={false} role="Default" page={ContactUs} />,
+    path: "/contact-us",
+    isAdmin: false,
+  },
 
 
   {

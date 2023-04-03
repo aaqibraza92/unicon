@@ -10,6 +10,18 @@ let data = [
   "Functional services (FSP)",
 ];
 
+let data2 = [
+  "Temporary/Contract",
+  "Contract-to-permanent / Full-Time",
+  "Permanent/Full-Time",
+  "Functional services (FSP)",
+  "Temporary/Contract",
+  "Contract-to-permanent / Full-Time",
+  "Permanent/Full-Time",
+  "Functional services (FSP)",
+];
+
+
 const PreclinicalScientific = () => {
   return (
     <>
@@ -80,7 +92,7 @@ const PreclinicalScientific = () => {
         </Container>
       </section>
 
-      <section className="pt80 pb0">
+      <section className="pt80 pb80">
         <Container>
           <Row className="align-items-center justify-content-center">
             <Col lg={9} md={9}>
@@ -91,16 +103,21 @@ const PreclinicalScientific = () => {
           </Row>
 
           <Row className="align-items-center justify-content-center">
-            <Col lg={8} md={8}>
+            <Col lg={7} md={7}>
               <Row>
-                {data.map((e, i) => (
-                  <Col lg={6}>
+                {data2.map((e, i) => (
+                  <Col lg={6} key={i}>
                     <div className="d-flex align-items-center mb12" key={i}>
                       <span className="mr10">{checkSvg}</span>
-                      <span className="colorPara fs16">{e}</span>
+                      <span className="colorBlue fs16 fBold">{e}</span>
                     </div>
                   </Col>
                 ))}
+
+                <div className="d-flex justify-content-center mt30">
+                <a className="btnTheme bgGreen mr12" href="/">Find Talent</a>
+                <a className="btnTheme bgBlue" href="/">Find Jobs</a>
+                </div>
               </Row>
             </Col>
           </Row>

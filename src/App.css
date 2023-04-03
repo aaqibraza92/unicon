@@ -51,3 +51,54 @@ a.line {
 @media only screen and (max-width: 767px) {
 
 }
+
+.inputTheme {
+  border: 1px solid #1B2B4026;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  padding: 7px 10px;
+  height: 48px;
+  transition: all 0.3s ease-in;
+  outline: none;
+}
+.inputTheme:focus {
+border-color: #000
+}
+.fileUploadTheme {
+  border: 1px solid #1B2B4026;
+  height: 48px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+}
+.fileUploadTheme .chooseFile {
+  background: #1B2B40BF;
+  color: #fff;
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-left: 12px;
+  font-size: 14px;
+}
+.tabbStyle {
+  border: 1px solid #1B2B4026;
+  border-radius: 30px;
+}
+
+.tabbStyle button {
+  background: transparent;
+  border: none;
+  padding: 12px 30px 12px 30px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+.tabbStyle button.active {
+  background: var(--colorGreen);
+  color: #fff;
+}
+.wrapperContact {
+  -webkit-box-shadow: 0px 10px 60px #B0BAC554;
+  box-shadow: 0px 10px 60px #B0BAC554;
+  padding: 40px;
+}
