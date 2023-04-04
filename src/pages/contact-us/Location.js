@@ -35,7 +35,7 @@ const Location = () => {
         <h2 className="text-center fBold colorBlue fs36 mb36">Our Office Locations</h2>
         <Row>
           {data.map((e, i) => (
-            <Col key={i} lg={3} md={3}>
+            <Col key={i} lg={3} md={3} xs={6}>
               <div className="teamWrapper bgGradient radius20 pb15">
                 <div>
                   <img src={e.img} className="img-fluid w-100" alt="" />

@@ -14,6 +14,15 @@ import OurTeam from "../../pages/OurTeam";
 import SingleTeam from "../../pages/OurTeam/SingleTeam";
 import PreclinicalScientific from "../../pages/home/services/PreclinicalScientific";
 import ContactUs from "../../pages/contact-us";
+import Blogs from "../../pages/blogs";
+import CoreValues from "../../pages/Core-values";
+import ClinicalOperations from "../../pages/home/services/ClinicalOperations";
+import Biometrics from "../../pages/home/services/Biometrics";
+import RegulatoryAffairs from "../../pages/home/services/RegulatoryAffairs";
+import DrugSafetyPV from "../../pages/home/services/DrugSafetyPV";
+import MedicalAffairs from "../../pages/home/services/MedicalAffairs";
+import QualityCompliance from "../../pages/home/services/QualityCompliance";
+import Validation from "../../pages/home/services/Validation";
 
 const GetRoute = ({ isprivate: isPrivate, page: Page, ...rest }) => {
 
@@ -60,6 +69,11 @@ let RouterList = [
     isAdmin: false,
   },
   {
+    element: <GetRoute isprivate={false} role="Default" page={CoreValues} />,
+    path: "/core-values",
+    isAdmin: false,
+  },
+  {
     element: <GetRoute isprivate={false} role="Default" page={OurTeam} />,
     path: "/our-team",
     isAdmin: false,
@@ -70,8 +84,48 @@ let RouterList = [
     isAdmin: false,
   },
   {
+    element: <GetRoute isprivate={false} role="Default" page={Blogs} />,
+    path: "/blogs",
+    isAdmin: false,
+  },
+  {
     element: <GetRoute isprivate={false} role="Default" page={PreclinicalScientific} />,
     path: "/preclinical-scientific",
+    isAdmin: false,
+  },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={ClinicalOperations} />,
+    path: "/clinical-operations",
+    isAdmin: false,
+  },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={Biometrics} />,
+    path: "/biometrics",
+    isAdmin: false,
+  },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={RegulatoryAffairs} />,
+    path: "/regulatory-affairs",
+    isAdmin: false,
+  },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={DrugSafetyPV} />,
+    path: "/drug-safety-pv",
+    isAdmin: false,
+  },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={MedicalAffairs} />,
+    path: "/medical-affairs",
+    isAdmin: false,
+  },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={QualityCompliance} />,
+    path: "/quality-compliance",
+    isAdmin: false,
+  },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={Validation} />,
+    path: "/validation",
     isAdmin: false,
   },
   {

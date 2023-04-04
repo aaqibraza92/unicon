@@ -28,7 +28,7 @@ const Footer = () => {
                 <ul className="noUl">
                   <li className="mb8">
                     <Link
-                      to="#"
+                      to="/about-us"
                       className="colorWhite fs15 fRegular itemLightwhite"
                     >
                       Our Story
@@ -36,7 +36,7 @@ const Footer = () => {
                   </li>
                   <li className="mb8">
                     <Link
-                      to="#"
+                      to="/preclinical-scientific"
                       className="colorWhite fs15 fRegular itemLightwhite"
                     >
                       Practice Areas
@@ -44,23 +44,23 @@ const Footer = () => {
                   </li>
                   <li className="mb8">
                     <Link
-                      to="#"
+                      to="/our-team"
                       className="colorWhite fs15 fRegular itemLightwhite"
                     >
-                      Careers
+                      Our Team
                     </Link>
                   </li>
                   <li className="mb8">
                     <Link
-                      to="#"
+                      to="/blogs"
                       className="colorWhite fs15 fRegular itemLightwhite"
                     >
-                      Insights
+                      Blogs
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="#"
+                      to="/contact-us"
                       className="colorWhite fs15 fRegular itemLightwhite"
                     >
                       Contact Us

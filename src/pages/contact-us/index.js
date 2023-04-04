@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import BreadCrumb from "../../components/BreadCrumb";
 import Location from "./Location";
 import { Col, Container, Row } from "reactstrap";
+import Select from "react-select";
 
 const ContactUs = () => {
+  const [sortby,setsortby]=useState("");
+  const [jobtype,setjobtype]=useState("");
+  
   return (
     <>
       <BreadCrumb
@@ -17,7 +21,7 @@ const ContactUs = () => {
 
       <section className="formSection">
         <Container>
-          <div className="wrapperContact">
+          <div className="wrapperContact radius20">
             <Row className="justify-content-center">
               <Col lg={7}>
               <div className="text-center mb30">
@@ -50,11 +54,19 @@ const ContactUs = () => {
             <Row>
               <Col lg={4} md={4}>
               <div className="mb25">
-              <input
-                  type="text"
-                  className="inputTheme w-100"
-                  placeholder="Choose your nearest office *"
-                />
+              <Select
+                      classNamePrefix="themeSelect"
+                      className="themeSelect"
+                      options={[
+                        {value: "Lorem1", label: "Lorem1"},
+                        {value: "Lorem2", label: "Lorem2"}
+                      ]}
+                      value={sortby}
+                      placeholder={<div>Choose your nearest office *</div>}
+                      onChange={(e) => setsortby(e)}
+                      //isMulti={true}
+                    />
+         
               </div>
            
               </Col>
@@ -119,9 +131,26 @@ const ContactUs = () => {
               
               </Col>
 
-              <Col lg={6} md={6}></Col>
               <Col lg={6} md={6}>
-                <Row className="align-items-center">
+              <div className="mb25">
+              <Select
+                      classNamePrefix="themeSelect"
+                      className="themeSelect"
+                      options={[
+                        {value: "Lorem1", label: "Lorem1"},
+                        {value: "Lorem2", label: "Lorem2"}
+                      ]}
+                      value={jobtype}
+                      placeholder={<div>Job type *</div>}
+                      onChange={(e) => setsortby(e)}
+                      //isMulti={true}
+                    />
+              </div>
+           
+              </Col>
+              <Col lg={6} md={6}>
+              <div className="mb25">
+              <Row className="align-items-center">
                   <Col lg={3} md={3}>
                     <div className="fs14 fBold colorBlue">Upload Resume</div>
                   </Col>
@@ -137,17 +166,19 @@ const ContactUs = () => {
                     <input id="fileUpload" className="d-none" type="file" />
                   </Col>
                 </Row>
+              </div>
+        
               </Col>
 
               <Col lg={12}>
-                <p className="fs14 colorBlue">
+                <p className="fs14 colorPara mt27">
                   By Registering, You Confirm That You Agree To The Processing
                   Of Your Personal Data As Described In Our Privacy Policy
                 </p>
 
                 <div className="mt30 d-flex justify-content-between">
                   <div></div>
-                  <button className="noBtn btnTheme">Submit</button>
+                  <button className="noBtn bgBlue btnTheme">Submit</button>
                 </div>
               </Col>
             </Row>

@@ -1,9 +1,10 @@
   .wrapperArea {
     background: #fff;
     border: 2px solid transparent;
-    padding: 12px;
+    padding: 20px;
     -webkit-border-radius: 12px;
     border-radius: 12px;
+    transition: all 0.5s;
   }
   .wrapperArea:hover {
     border-color: var(--colorGreen);
@@ -29,3 +30,12 @@
   .counterSection {
     padding: 80px 0;
   }
+  .intro-content hr {
+    background: linear-gradient(90deg, rgba(4,80,140,1) 52%, rgba(4,80,140,1) 52%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
+    border: 0;
+    position: relative;
+    left: calc(-6.8rem - 15px);
+    z-index: 9;
+    height: 2.4px;
+    opacity: 1;
+}

@@ -14,8 +14,15 @@
     font-family: ax_bold;
     src: url(./assets/fonts/Axiforma-Bold.ttf);
   }
+  @font-face {
+    font-family: ax_semibold;
+    src: url(./assets/fonts/Axiforma-SemiBold.ttf);
+  }
   .fRegular{
     font-family: ax_regular ;
+  }
+  .fSemiBold{
+    font-family: ax_semibold ;
   }
   .fBold{
     font-family: ax_bold ;
@@ -49,7 +56,9 @@ a.line {
   text-decoration: underline !important;
 }
 @media only screen and (max-width: 767px) {
-
+  body .wrapperContact {
+    padding: 15px;
+  }
 }
 
 .inputTheme {
@@ -101,4 +110,63 @@ border-color: #000
   -webkit-box-shadow: 0px 10px 60px #B0BAC554;
   box-shadow: 0px 10px 60px #B0BAC554;
   padding: 40px;
+  background: #fff;
+}
+.formSection {
+  margin-top: -50px;
+}
+/*react select*/
+.themeSelect__indicator-separator {
+  display: none;
+}
+.themeSelect__control {
+  border: 1px solid #1B2B4026;
+  outline: none !important;
+}
+.themeSelect__option--is-selected {
+  background: #000 !important;
+}
+.themeSelect__option:hover {
+  background: var(--colorGreen) !important;
+  color: #fff;
+}
+.themeSelect *,
+.themeSelect {
+  outline: none !important;
+}
+.themeSelect__input-container {
+  margin-top: -6px !important;
+}
+.themeSelect__value-container {
+  height: 45px;
+}
+.themeSelect__control--is-focused {
+  border-color: #1B2B4026 !important;
+  -webkit-box-shadow: 0 0 0 0 var(--colorBlack) !important;
+  box-shadow: 0 0 0 0 var(--colorBlack) !important;
+}
+.select_border div.themeSelect .themeSelect__control {
+  border-color: #e8e9e9;
+}
+.themeSelect__placeholder {
+  margin-top: -5px;
+}
+/*react select*/
+.bgBlue.btnTheme:hover {
+  background: var(--colorGreen) !important;
+}
+.bgGreen.btnTheme:hover {
+  background: var(--colorBlue) !important;
+}
+.bgcover{
+  background-size: cover;
+}
+.intro-content-second hr {
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(4,80,140,1) 52%, rgba(4,80,140,1) 100%, rgba(255,255,255,1) 100%);
+  border: 0;
+  position: relative;
+  right: calc(-5.2rem - 15px);
+  z-index: 9;
+  height: 2.4px;
+  opacity: 1;
 }

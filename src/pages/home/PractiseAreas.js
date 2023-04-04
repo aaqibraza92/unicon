@@ -48,7 +48,7 @@ const PractiseAreas = () => {
             <Col lg={3} md={3} xs={6} key={i}>
               <div className="wrapperArea d-flex align-items-center">
                 <img src={e.img.default} alt={e.title} />
-                <span className="ml12 colorPara fs17">{e.title}</span>
+                <span className="ml12 colorPara fs18">{e.title}</span>
               </div>
             </Col>
           ))}

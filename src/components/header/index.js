@@ -33,32 +33,35 @@ const Header = () => {
           <Col lg={9}>
             <ul className="noUl d-flex headerMenu mb0 align-items-center justify-content-end">
               <li>
-                <Link to="#" className="colorPara">
+                <Link to="/" className="colorPara">
               Home
                 </Link>
               </li>
               <li>
-                <Link to="#" className="colorPara">
+                <Link to="/about-us" className="colorPara">
                 Our Story
                 </Link>
               </li>
               <li>
-                <Link to="#" className="colorPara">
+                <Link to="/preclinical-scientific" className="colorPara">
                 Practice Areas
                 </Link>
               </li>
               <li>
-                <Link to="#" className="colorPara">
-                Careers
-                </Link>
+              <Link
+                      to="/our-team"
+                      className="colorPara"
+                    >
+                      Our Team
+                    </Link>
               </li>
               <li>
-                <Link to="#" className="colorPara">
+                <Link to="/our-team/xyz" className="colorPara">
                 Insights
                 </Link>
               </li>
               <li>
-                <Link to="#" className="colorPara">
+                <Link to="/contact-us" className="colorPara">
                 Contact Us
                 </Link>
               </li>

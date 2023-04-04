@@ -15,12 +15,13 @@ const WhyChosseUs = () => {
   return (
     <section className="pt80 pb80">
       <Container>
-        <Row>
+        <Row className="align-items-center">
           <Col lg={6}>
             <img src={require('../../assets/img/whyChoose.jpg')} className='img-fluid' alt="what we do" />
           </Col>
-          <Col lg={6}>
+          <Col lg={6} className="intro-content">
             <h2 className="colorBlue fs36 fBold mb30">Why Choose Us</h2>
+            <hr class="wp-block-separator has-alpha-channel-opacity"></hr>
             <ul className="noUl mb30">
               {data.map((e, i) => (
                 <li className="d-flex align-items-center mb15" key={i}>

@@ -13,7 +13,7 @@ const TeamItems = () => {
           <Col lg={3} md={3} xs={6}>
             <div className="teamWrapper bgGradient radius20 pb15">
               <div>
-              <Link to="#"> <img
+              <Link to="/team/xyz"> <img
                   src={require("../../assets/img/team.png")}
                   className="img-fluid w-100"
                   alt=""

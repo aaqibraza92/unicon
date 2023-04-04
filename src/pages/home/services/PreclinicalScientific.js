@@ -4,21 +4,23 @@ import { Col, Container, Row } from "reactstrap";
 import { checkSvg } from "../../../assets/svg/Svg";
 
 let data = [
-  "Temporary/Contract",
-  "Contract-to-permanent / Full-Time",
-  "Permanent/Full-Time",
-  "Functional services (FSP)",
+  "Research and Development (R&D)",
+  "Analytical Development",
+  "Quality Control",
+  "Microbiology",
 ];
 
 let data2 = [
-  "Temporary/Contract",
-  "Contract-to-permanent / Full-Time",
-  "Permanent/Full-Time",
-  "Functional services (FSP)",
-  "Temporary/Contract",
-  "Contract-to-permanent / Full-Time",
-  "Permanent/Full-Time",
-  "Functional services (FSP)",
+  "Technical Project Manager",
+  "Research Scientist",
+  "Quality Control Manager",
+  "Quality Control Chemist",
+  "Analytical Chemist",
+  "Data Review Specialist",
+  "Microbiologist",
+  "Research Associates",
+  "Scientist",
+  "Manufacturing Technician",
 ];
 
 

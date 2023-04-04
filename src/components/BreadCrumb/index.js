@@ -4,7 +4,7 @@ import { angleRight } from "../../assets/svg/Svg";
 
 const BreadCrumb = (props) => {
   return (
-    <section className="breadCrumb text-center d-flex align-items-center justify-content-center pt80 pb80">
+    <section className="breadCrumb text-center bgcover d-flex align-items-center justify-content-center pt80 pb80">
       <div className="contentArea">
         <h2 className="colorBlue fs36 fBold">{props?.title}</h2>
         {props.subTitle && (

@@ -178,6 +178,12 @@ body .radiusFull{
   -o-border-radius: 100%;
   border-radius: 100%;
 }
+.radius16{
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -o-border-radius: 16px;
+  border-radius: 16px;
+}
 .textShadow{
   -webkit-text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);

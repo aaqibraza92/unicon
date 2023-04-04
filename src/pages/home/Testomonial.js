@@ -12,29 +12,24 @@ import "swiper/css/autoplay";
 
 let data=[
   {
-    para: "I've worked with Unicon Pharma for the last few years. They've  been thoroughly professional in their approach and very  accommodative. They know the pharmacovigilance business and provide clear, open communication and set precise expectations. I would highly recommend them if you are looking for qualified pharmacovigilance resources.",
+    para: "I've worked with Unicon Pharma for the last few years. They've been thoroughly professional in their approach and very accommodative. They know the pharmacovigilance business and provide clear, open communication and set precise expectations. I would highly recommend them if you are looking for qualified pharmacovigilance resources.",
     author: "Global Oncology Company",
     position: "Associate Director of Pharmacovigilance / Medical Safety",
     img: require("../../assets/img/user.png"),
   },
   {
-    para: "I've worked with Unicon Pharma for the last few years. They've  been thoroughly professional in their approach and very  accommodative. They know the pharmacovigilance business and provide clear, open communication and set precise expectations. I would highly recommend them if you are looking for qualified pharmacovigilance resources.",
-    author: "Global Oncology Company",
-    position: "Associate Director of Pharmacovigilance / Medical Safety",
+    para: "Unicon Pharma provides strong resources for our computer systems validation engagements. They have supported us in a BIG way and always were professional. Their recruitment team understands all aspects of validation and offered candidates within 24 hours. I look forward to many more years of working with them !",
+    author: "Global Pharmaceutical Company",
+    position: "Project Manager - Validation",
     img: require("../../assets/img/user.png"),
   },
   {
-    para: "I've worked with Unicon Pharma for the last few years. They've  been thoroughly professional in their approach and very  accommodative. They know the pharmacovigilance business and provide clear, open communication and set precise expectations. I would highly recommend them if you are looking for qualified pharmacovigilance resources.",
-    author: "Global Oncology Company",
-    position: "Associate Director of Pharmacovigilance / Medical Safety",
+    para: "We are working in a niche market where there aren't a lot of pharma companies. It has been a huge challenge getting candidates to relocate but Unicon Pharma has been one of the few agencies to do so. Their communication from beginning to end has been phenomenal and they've provided us with top-level candidates in our pharmacovigilance, clinical data management, statistical programming, regulatory affairs and quality assurance space.",
+    author: "A Specialty Pharmaceutical Company",
+    position: "Manager, Human Resources",
     img: require("../../assets/img/user.png"),
   },
-  {
-    para: "I've worked with Unicon Pharma for the last few years. They've  been thoroughly professional in their approach and very  accommodative. They know the pharmacovigilance business and provide clear, open communication and set precise expectations. I would highly recommend them if you are looking for qualified pharmacovigilance resources.",
-    author: "Global Oncology Company",
-    position: "Associate Director of Pharmacovigilance / Medical Safety",
-    img: require("../../assets/img/user.png"),
-  },
+ 
   
 
 ]

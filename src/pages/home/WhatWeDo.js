@@ -13,12 +13,13 @@ const WhatWeDo = () => {
   return (
     <section className="pt80 pb80">
       <Container>
-        <Row>
+        <Row className="align-items-center">
           <Col lg={6}>
             <img src={require('../../assets/img/what_we.jpg')} className='img-fluid' alt="what we do" />
           </Col>
-          <Col lg={6}>
+          <Col lg={6} className="intro-content">
             <h2 className="colorBlue fs36 fBold mb30">What We Do</h2>
+            <hr class="wp-block-separator has-alpha-channel-opacity"></hr>
             <p className="fs16 colorPara">
               At Unicon Pharma, we focus exclusively on Life Sciences—nothing
               else. From our inception, we’ve maintained a singular focus on
