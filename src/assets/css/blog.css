@@ -1,0 +1,24 @@
+.featuredImg {
+  height: 227px;
+}
+.featuredImg a,
+.featuredImg img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+.blogWrapper {
+    border: 1px solid #ddd;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -o-border-radius: 12px;
+    border-radius: 12px;
+  }
+
+  .featuredImg img {
+    -webkit-border-radius: 12px 12px 0 0;
+    border-radius: 12px 12px 0 0;
+  }
+  .blogWrapper:hover {
+    border-color: var(--colorGreen);
+  }

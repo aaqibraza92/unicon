@@ -3,6 +3,7 @@ import BreadCrumb from "../../components/BreadCrumb";
 import BlogItems from "./blogItems";
 import { Col, Container, Row } from "reactstrap";
 import { Helmet } from "react-helmet";
+import '../../assets/css/blog.css'
 const Blogs = () => {
   return (
     <>

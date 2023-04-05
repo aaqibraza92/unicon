@@ -11,20 +11,22 @@ const BreadCrumb = (props) => {
           <p className="mt15 colorGreen fs20">{props.subTitle}</p>
         )}
 
-        <ul className="noUl d-flex justify-content-center">
-          {props?.items.map((e, i) => (
-            <li key={i} className="mr10 colorPara">
-              {e.url === "" ? (
-                <span>{e.name}</span>
-              ) : (
-                <Link className="colorPara" to={e.url}>
-                  {" "}
-                  {e.name} <span className="ml5">{angleRight}</span>{" "}
-                </Link>
-              )}
-            </li>
-          ))}
-        </ul>
+        {props?.items && (
+          <ul className="noUl d-flex justify-content-center">
+            {props?.items.map((e, i) => (
+              <li key={i} className="mr10 colorPara">
+                {e.url === "" ? (
+                  <span>{e.name}</span>
+                ) : (
+                  <Link className="colorPara" to={e.url}>
+                    {" "}
+                    {e.name} <span className="ml5">{angleRight}</span>{" "}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </section>
   );
