@@ -2,7 +2,7 @@ import React from "react";
 import BreadCrumb from "../../../components/BreadCrumb";
 import { Col, Container, Row } from "reactstrap";
 import { checkSvg } from "../../../assets/svg/Svg";
-
+import { Helmet } from "react-helmet";
 let data = [
   "Medical Communications",
   "Scientific Publications",
@@ -23,10 +23,12 @@ let data2 = [
   "Medical Writers  ",
 ];
 
-
 const MedicalAffairs = () => {
   return (
     <>
+      <Helmet>
+        <title>Medical Affairs | Unicon</title>
+      </Helmet>
       <BreadCrumb
         title="Medical Affairs"
         items={[
@@ -41,9 +43,15 @@ const MedicalAffairs = () => {
           <Row className="align-items-center">
             <Col lg={6} md={6}>
               <p className="fs22 colorBlue mb20">
-              With years of experience, Unicon Pharma has gained reputation as niche resource to medical affairs and communications groups at various companies, big and small. </p>
+                With years of experience, Unicon Pharma has gained reputation as
+                niche resource to medical affairs and communications groups at
+                various companies, big and small.{" "}
+              </p>
               <p className="fs22 colorBlue">
-              Whether it’s contract staff augmentation, project teams, contract to hire or direct hire resources, Unicon Pharma can assist your organization to meet your goals. </p>
+                Whether it’s contract staff augmentation, project teams,
+                contract to hire or direct hire resources, Unicon Pharma can
+                assist your organization to meet your goals.{" "}
+              </p>
             </Col>
             <Col lg={6} md={6}>
               <img
@@ -61,7 +69,8 @@ const MedicalAffairs = () => {
           <Row className="align-items-center justify-content-center">
             <Col lg={9} md={9}>
               <h2 className="colorBlue text-center fs36 fBold mb50">
-              Our team can assist in finding best-in-class talent within the following functional areas:
+                Our team can assist in finding best-in-class talent within the
+                following functional areas:
               </h2>
             </Col>
           </Row>
@@ -111,8 +120,12 @@ const MedicalAffairs = () => {
                 ))}
 
                 <div className="d-flex justify-content-center mt30">
-                <a className="btnTheme bgGreen mr12" href="/">Find Talent</a>
-                <a className="btnTheme bgBlue" href="/">Find Jobs</a>
+                  <a className="btnTheme bgGreen mr12" href="/">
+                    Find Talent
+                  </a>
+                  <a className="btnTheme bgBlue" href="/">
+                    Find Jobs
+                  </a>
                 </div>
               </Row>
             </Col>

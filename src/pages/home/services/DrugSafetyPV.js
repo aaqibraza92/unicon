@@ -2,7 +2,7 @@ import React from "react";
 import BreadCrumb from "../../../components/BreadCrumb";
 import { Col, Container, Row } from "reactstrap";
 import { checkSvg } from "../../../assets/svg/Svg";
-
+import { Helmet } from "react-helmet";
 let data = [
   "AE Case Management (intake, triage, case processing, narrative writing, medical assessment and regulatory submission)",
   "Aggregate Reports (PBRERs, DSURs, PADERs, ASRs and others)",
@@ -29,6 +29,9 @@ let data2 = [
 const DrugSafetyPV = () => {
   return (
     <>
+       <Helmet>
+        <title>Drug Safety/PV | Unicon</title>
+      </Helmet>
       <BreadCrumb
         title="Drug Safety/PV"
         items={[

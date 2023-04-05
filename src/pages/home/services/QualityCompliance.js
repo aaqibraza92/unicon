@@ -2,7 +2,7 @@ import React from "react";
 import BreadCrumb from "../../../components/BreadCrumb";
 import { Col, Container, Row } from "reactstrap";
 import { checkSvg } from "../../../assets/svg/Svg";
-
+import { Helmet } from "react-helmet";
 let data = [
   "GXP (GMP/GLP/GCP/GDP)",
   "Quality Systems Management",
@@ -26,6 +26,9 @@ let data2 = [
 const QualityCompliance = () => {
   return (
     <>
+       <Helmet>
+        <title>Quality Compliance | Unicon</title>
+      </Helmet>
       <BreadCrumb
         title="Quality Compliance"
         items={[

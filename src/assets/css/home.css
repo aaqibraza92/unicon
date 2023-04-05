@@ -28,7 +28,7 @@
     color: #1B2B40BF;
   }
   .counterSection {
-    padding: 80px 0;
+    padding: 100px 0;
   }
   .intro-content hr {
     background: linear-gradient(90deg, rgba(4,80,140,1) 52%, rgba(4,80,140,1) 52%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
@@ -39,3 +39,13 @@
     height: 2.4px;
     opacity: 1;
 }
+@media only screen and (max-width:767px) {
+  .homeBanner {
+    height: 200px;
+  }
+  .homeBanner img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+

@@ -3,10 +3,13 @@ import Counter from "../home/Counter";
 import Testomonial from "../home/Testomonial";
 import BreadCrumb from "../../components/BreadCrumb";
 import { Col, Container, Row } from "reactstrap";
-
+import { Helmet } from "react-helmet";
 const AboutUs = () => {
   return (
     <>
+     <Helmet>
+        <title>About Us | Unicon</title>
+      </Helmet>
       <BreadCrumb
         title="About Unicon Pharma"
         items={[{ name: "Home", url: "/" },{ name: "Our Story", url: "/" },{ name: "About Us", url: "" }]}

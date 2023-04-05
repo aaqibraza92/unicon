@@ -2,7 +2,7 @@ import React from "react";
 import BreadCrumb from "../../../components/BreadCrumb";
 import { Col, Container, Row } from "reactstrap";
 import { checkSvg } from "../../../assets/svg/Svg";
-
+import { Helmet } from "react-helmet";
 let data = [
   "Global Regulatory Strategy ",
   "Regulatory Operations and Submissions",
@@ -23,10 +23,12 @@ let data2 = [
   "Regulatory Writers",
 ];
 
-
 const RegulatoryAffairs = () => {
   return (
     <>
+      <Helmet>
+        <title>Regulatory Affairs | Unicon</title>
+      </Helmet>
       <BreadCrumb
         title="Regulatory Affairs"
         items={[
@@ -41,9 +43,15 @@ const RegulatoryAffairs = () => {
           <Row className="align-items-center">
             <Col lg={6} md={6}>
               <p className="fs22 colorBlue mb20">
-              Unicon Pharma provides global regulatory staffing and recruiting support across all stages of the drug and device development life cycle.</p>
+                Unicon Pharma provides global regulatory staffing and recruiting
+                support across all stages of the drug and device development
+                life cycle.
+              </p>
               <p className="fs22 colorBlue">
-              Whether it’s contract staff augmentation, project teams, contract to hire or direct hire resources, Unicon Pharma can assist your organization.  </p>
+                Whether it’s contract staff augmentation, project teams,
+                contract to hire or direct hire resources, Unicon Pharma can
+                assist your organization.{" "}
+              </p>
             </Col>
             <Col lg={6} md={6}>
               <img
@@ -61,7 +69,8 @@ const RegulatoryAffairs = () => {
           <Row className="align-items-center justify-content-center">
             <Col lg={9} md={9}>
               <h2 className="colorBlue text-center fs36 fBold mb50">
-              Our team can assist in finding best-in-class talent within the following functional areas:
+                Our team can assist in finding best-in-class talent within the
+                following functional areas:
               </h2>
             </Col>
           </Row>
@@ -111,8 +120,12 @@ const RegulatoryAffairs = () => {
                 ))}
 
                 <div className="d-flex justify-content-center mt30">
-                <a className="btnTheme bgGreen mr12" href="/">Find Talent</a>
-                <a className="btnTheme bgBlue" href="/">Find Jobs</a>
+                  <a className="btnTheme bgGreen mr12" href="/">
+                    Find Talent
+                  </a>
+                  <a className="btnTheme bgBlue" href="/">
+                    Find Jobs
+                  </a>
                 </div>
               </Row>
             </Col>

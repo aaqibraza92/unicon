@@ -2,7 +2,7 @@ import React from "react";
 import BreadCrumb from "../../../components/BreadCrumb";
 import { Col, Container, Row } from "reactstrap";
 import { checkSvg } from "../../../assets/svg/Svg";
-
+import { Helmet } from "react-helmet";
 let data = [
   "Case Report Form (CRF/eCRF) Design ",
   "Database Design, Development, Deployment, and Maintenance",
@@ -30,6 +30,9 @@ let data2 = [
 const Biometrics = () => {
   return (
     <>
+      <Helmet>
+        <title>Biometrics | Unicon</title>
+      </Helmet>
       <BreadCrumb
         title="Biometrics"
         items={[

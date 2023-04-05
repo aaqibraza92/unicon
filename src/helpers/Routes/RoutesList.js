@@ -23,6 +23,8 @@ import DrugSafetyPV from "../../pages/home/services/DrugSafetyPV";
 import MedicalAffairs from "../../pages/home/services/MedicalAffairs";
 import QualityCompliance from "../../pages/home/services/QualityCompliance";
 import Validation from "../../pages/home/services/Validation";
+import OpenIndustryJobs from "../../pages/open-industry-jobs";
+import UniconPharmaCareers from "../../pages/unicon-pharma-careers";
 
 const GetRoute = ({ isprivate: isPrivate, page: Page, ...rest }) => {
 
@@ -131,6 +133,16 @@ let RouterList = [
   {
     element: <GetRoute isprivate={false} role="Default" page={ContactUs} />,
     path: "/contact-us",
+    isAdmin: false,
+  },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={OpenIndustryJobs} />,
+    path: "/open-industry-jobs",
+    isAdmin: false,
+  },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={UniconPharmaCareers} />,
+    path: "/unicon-pharma-careers",
     isAdmin: false,
   },
 

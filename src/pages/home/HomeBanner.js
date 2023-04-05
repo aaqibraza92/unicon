@@ -4,7 +4,7 @@ import { Col, Container, Row } from "reactstrap";
 
 const HomeBanner = () => {
   return (
-    <div className="position-relative d-flex align-items-center">
+    <div className="position-relative homeBanner d-flex align-items-center">
       <img
         className="img-fluid w-100"
         src={require("../../assets/img/home_banner.jpg")}
@@ -15,7 +15,7 @@ const HomeBanner = () => {
           <Row>
             <Col lg={5}>
               <div>
-                <h1 className="fs50 fSemiBold text-start colorBlue ml0">
+                <h1 className="fs50 mobFs15 fSemiBold text-start colorBlue ml0">
                   The Best & Brightest in Life Sciences. Working for You.
                 </h1>
 

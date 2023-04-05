@@ -26,12 +26,12 @@ let data = [
   },
 
 ];
-const Counter = () => {
+const Counter = (props) => {
   const [counterOn, setcounterOn] = useState(false);
   return (
     <ScrollTrigger
       onEnter={() => setcounterOn(true)}
-      className="counterSection"
+      className={`counterSection ${props.class && props.class}`}
     >
       {counterOn && (
         <Container>

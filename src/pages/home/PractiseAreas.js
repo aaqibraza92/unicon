@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
-
+import { Helmet } from "react-helmet";
 let data = [
   {
     img: require("../../assets/img/practical.svg"),
@@ -38,23 +38,31 @@ let data = [
 
 const PractiseAreas = () => {
   return (
-    <section className="pt80 pb80 practicalArea" style={{ background: `require('../../assets/img/area_bg.jpg')` }}>
-    <h2 className="colorBlue fs36 fBold text-center mb30">
-    Practice Areas
-    </h2>
-      <Container>
-        <Row className="gy-4">
-          {data.map((e, i) => (
-            <Col lg={3} md={3} xs={6} key={i}>
-              <div className="wrapperArea d-flex align-items-center">
-                <img src={e.img.default} alt={e.title} />
-                <span className="ml12 colorPara fs18">{e.title}</span>
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </section>
+    <>
+      <Helmet>
+        <title>Preclinical & Scientific | Unicon</title>
+      </Helmet>
+      <section
+        className="pt80 pb80 practicalArea"
+        style={{ background: `require('../../assets/img/area_bg.jpg')` }}
+      >
+        <h2 className="colorBlue fs36 fBold text-center mb30">
+          Practice Areas
+        </h2>
+        <Container>
+          <Row className="gy-4">
+            {data.map((e, i) => (
+              <Col lg={3} md={3} xs={6} key={i}>
+                <div className="wrapperArea d-flex align-items-center">
+                  <img src={e.img.default} alt={e.title} />
+                  <span className="ml12 colorPara fs18">{e.title}</span>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+    </>
   );
 };
 

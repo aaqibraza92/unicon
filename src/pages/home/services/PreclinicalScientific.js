@@ -2,7 +2,7 @@ import React from "react";
 import BreadCrumb from "../../../components/BreadCrumb";
 import { Col, Container, Row } from "reactstrap";
 import { checkSvg } from "../../../assets/svg/Svg";
-
+import { Helmet } from "react-helmet";
 let data = [
   "Research and Development (R&D)",
   "Analytical Development",
@@ -27,6 +27,9 @@ let data2 = [
 const PreclinicalScientific = () => {
   return (
     <>
+       <Helmet>
+        <title>Preclinical & Scientific | Unicon</title>
+      </Helmet>
       <BreadCrumb
         title="Preclinical & Scientific"
         items={[
