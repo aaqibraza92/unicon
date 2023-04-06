@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "reactstrap";
-import { callIcon, linkdinIcon, mailIcon, timeIcon } from "../../assets/svg/Svg";
+import { timeIcon } from "../../assets/svg/Svg";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import axios from "axios";
 import { BLOG_URL, HOME_URL } from "../../helpers/apiurls";
@@ -84,9 +84,18 @@ const BlogItems = () => {
 
   return (
     <>
+          {loading && (
+        <div className="d-flex justify-content-center">
+          <div
+            className="spinner-border text-secondary"
+            style={{ width: "3rem", height: "3rem" }}
+            role="status"
+          ></div>
+        </div>
+      )}
    <Row className="gy-4 gx-4 mb60">
       {postData.length > 0 && postData?.map((e, i) => (
-          <Col lg={4} md={4} xs={6} key={i}>
+          <Col lg={4} md={4} xs={12} key={i}>
             <div className="blogWrapper radius12 pb15 transition">
               <div className="featuredImg">
               <Link to={`/blog/${e?.slug}`}> <img
@@ -97,7 +106,7 @@ const BlogItems = () => {
                
               </div>
               <div className="text-start pt20 pb20 pl20 pr20">
-                <h3 className="lh24">   <Link to={`/blog/${e?.slug}`} className="fs18 fBold colorBlue"> {e?.title?.rendered} </Link></h3>
+                <h3 className="lh24" title={e?.title?.rendered}>   <Link to={`/blog/${e?.slug}`} className="fs18 fBold colorBlue"> {e?.title?.rendered.slice(0,33)} ... </Link></h3>
               
                 <div className="mt8 colorPara" dangerouslySetInnerHTML={{ __html: e?.excerpt?.rendered }} />
                 <div className="d-flex align-items-center">

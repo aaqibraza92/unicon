@@ -22,3 +22,11 @@
   .blogWrapper:hover {
     border-color: var(--colorGreen);
   }
+  .active > .page-link, .page-link.active {
+    background: var(--colorGreen) !important;
+    border-color: var(--colorGreen) !important;
+  }
+  .pagination {
+    margin-bottom: 35px;
+  }
+  

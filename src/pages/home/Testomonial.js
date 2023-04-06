@@ -39,7 +39,7 @@ const Testomonial = () => {
     <section className="bgTestimonial pt80 pb80">
       <Container>
         <p className="colorBlue text-uppercase ">WHAT PEOPLE SAY</p>
-        <h2 className="colorBlue fs36 fBold mb30"> About Unicon Pharma</h2>
+        <h2 className="colorBlue fs36 fBold mb30 mobFs28"> About Unicon Pharma</h2>
 
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}

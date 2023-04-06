@@ -33,6 +33,9 @@
 .breadCrumb{
   background: url('./assets/img/hero_img.jpg');
 }
+.single_bg{
+  background: url('./assets/img/single_bg.jpg');
+}
 
 .bgGradient{
 background: #f1faf4; /* Old browsers */
@@ -174,4 +177,43 @@ border-color: #000
 .teamWrapper img {
   -webkit-border-radius: 20px 20px 0 0;
   border-radius: 20px 20px 0 0;
+}
+.testimonialWrapper {
+  min-height: 323px;
+}
+
+@media only screen and (max-width: 767px) {
+  .Mobileteamimage img {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+  .singleTeam > .container {
+    margin-top: 55px;
+  }
+  body .mobileList {
+    display: block !important;
+  }
+  .mobileList li {
+    margin-bottom: 15px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: var(--colorGreen);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--colorGreen);
 }

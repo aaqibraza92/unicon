@@ -15,15 +15,15 @@ const HomeBanner = () => {
           <Row>
             <Col lg={5}>
               <div>
-                <h1 className="fs50 mobFs15 fSemiBold text-start colorBlue ml0">
+                <h1 className="fs50 mobFs17 mobwidth50 mobmb0 mobmr0 fSemiBold text-start colorBlue ml0">
                   The Best & Brightest in Life Sciences. Working for You.
                 </h1>
 
                 <div className="d-flex">
-                    <Link to="#" className="btnTheme bgGreen mr12 fMedium">
+                    <Link to="/contact-us" className="btnTheme bgGreen mr12 fMedium">
                     Find Talent
                     </Link>
-                    <Link to="#" className="btnTheme bgBlue fMedium">
+                    <Link to="/open-industry-jobs" className="btnTheme bgBlue fMedium">
                     Find Jobs
                     </Link>
                 </div>  

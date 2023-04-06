@@ -49,7 +49,7 @@ const SingleTeam = () => {
         <Container>
           <Row className="align-items-center">
             <Col lg={3}>
-              <div className="teamImgWrp">
+              <div className="teamImgWrp Mobileteamimage">
                 <img
                   src={data?.x_featured_media_medium}
                   className="img-fluid"
@@ -58,7 +58,7 @@ const SingleTeam = () => {
               </div>
             </Col>
             <Col lg={9}>
-              <h2 className="colorBlue fs36 fBold mb10">
+              <h2 className="colorBlue fs36 mobFs21 fBold mb10">
                 {data?.title?.rendered}
               </h2>
               <p className="colorGreen ">{data?.x_metadata?.position}</p>
@@ -82,7 +82,7 @@ const SingleTeam = () => {
                 }
               </div>
 
-              <ul className="noUl mt20 d-flex">
+              <ul className="noUl mt20 d-flex mobileList">
                 <li className="mr20">
                   <a href={`mailto:${data?.x_metadata?.email}`}>
                     {mailIcon}{" "}

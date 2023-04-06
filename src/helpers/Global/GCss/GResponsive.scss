@@ -3,6 +3,58 @@
   body .mobMr0 {
     margin-right: 0px;
   }
+  body .mobwidth50{
+    width: 50%;
+  }
+  body .mobmb0{
+    margin-bottom: 10px;
+  }
+  body .btnTheme {
+    background: #000;
+    padding: 7px 12px 7px 12px;
+    border-radius: 30px;
+    color: #fff;
+    line-height: 15px;
+    font-size: 12px;
+  }
+  body .pt80 {
+    padding-top: 40px;
+  }
+  body .pb80 {
+    padding-bottom: 40px;
+  }
+  body .mobileheight {
+    min-height: 358px;
+  }
+  body .mobmr0{
+    margin-right: 0px;
+  }
+  .mobilereverse {
+    flex-direction: column-reverse;
+  }
+  .mobilereverse .col-lg-6:nth-child(1) {
+    margin-top: 15px;
+  }
+  body .mobmb30{
+    margin-bottom: 30px;
+  }
+  body .mobmr5 {
+    margin-right: 5px;
+  }
+  body .mobFs10 a {
+    font-size: 10px;
+  }
+  body .mobFs10 a svg {
+    width: 4px !important;
+  }
+  body .mobFs10 span {
+    font-size: 10px;
+  }
+  body .wrapperArea {
+    padding: 12px;
+    border-radius: 7px;
+    transition: all 0.5s;
+  }
   body body .mobDflex {
     display: flex;
   }

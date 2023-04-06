@@ -49,7 +49,7 @@ const TeamItems = () => {
         {postData.length > 0 &&
           postData.map((e, i) => (
             <Col lg={3} md={3} xs={6} key={i}>
-              <div className="teamWrapper bgGradient radius20 pb15">
+              <div className="teamWrapper mobileheight bgGradient radius20 pb15">
                 <div>
                   <Link
                     to={{
@@ -71,13 +71,12 @@ const TeamItems = () => {
                         pathname: "/team/" + e?.slug,
                         state: { slug: e?.slug },
                       }}
-                      className="fs18 fBold colorBlue"
+                      className="fs18 mobFs15  fBold colorBlue"
                     >
-                      {" "}
-                      {e?.title?.rendered}{" "}
+                      {e?.title?.rendered}
                     </Link>
                   </h3>
-                  <p className="mt8 colorPara">{e?.x_metadata?.position}</p>
+                  <p className="mt8  mobFs11 colorPara">{e?.x_metadata?.position}</p>
                   <ul className="noUl d-flex justify-content-center">
                     <li className="mr10">
                       <a

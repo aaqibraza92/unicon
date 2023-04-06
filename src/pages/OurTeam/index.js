@@ -15,7 +15,7 @@ const OurTeam = () => {
         <Row className="justify-content-center mb30">
             <Col lg={7}>
             <div className="text-center">
-        <h2 className="colorBlue fs36 fBold mb20">
+        <h2 className="colorBlue fs36 mobFs28 fBold mb20">
           Meet Your Industry Experts
         </h2>
         {/* <p className="colorPara">

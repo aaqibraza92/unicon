@@ -70,5 +70,17 @@ export const timeIcon=<svg xmlns="http://www.w3.org/2000/svg" width="18" height=
 </g>
 </svg>
 
+export const burgerMenu=<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 36 36">
+<path id="Icon_open-grid-three-up" data-name="Icon open-grid-three-up" d="M0,0V9H9V0ZM13.5,0V9h9V0ZM27,0V9h9V0ZM0,13.5v9H9v-9Zm13.5,0v9h9v-9Zm13.5,0v9h9v-9ZM0,27v9H9V27Zm13.5,0v9h9V27ZM27,27v9h9V27Z" fill="#87a80d"/>
+</svg>
+
+export const closeIcon=<svg xmlns="http://www.w3.org/2000/svg" width="20.953" height="20.953" viewBox="0 0 20.953 20.953">
+<path id="Icon_ionic-md-close" data-name="Icon ionic-md-close" d="M28.477,9.619l-2.1-2.1L18,15.9,9.619,7.523l-2.1,2.1L15.9,18,7.523,26.381l2.1,2.1L18,20.1l8.381,8.381,2.1-2.1L20.1,18Z" transform="translate(-7.523 -7.523)" fill="#ebebeb"/>
+</svg>
+
+export const angleDownIcon=<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 23.616 13.503">
+<path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down" d="M18,20.679l8.93-8.937a1.681,1.681,0,0,1,2.384,0,1.7,1.7,0,0,1,0,2.391L19.2,24.258a1.685,1.685,0,0,1-2.327.049L6.68,14.14a1.688,1.688,0,0,1,2.384-2.391Z" transform="translate(-6.188 -11.246)" fill="#546070"/>
+</svg>
+
 
 

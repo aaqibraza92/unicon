@@ -19,7 +19,7 @@ const AboutUs = () => {
         <Container>
         <Row className="gy-3 gx-5 align-items-center">
         <Col lg={7} md={7} className="intro-content-second">
-        <h2 className="colorBlue fs36 fBold mb30"> The Best and Brightest in Life Sciences. Working for You.</h2>
+        <h2 className="colorBlue fs36  mobFs28 fBold mb30"> The Best and Brightest in Life Sciences. Working for You.</h2>
         <hr class="wp-block-separator has-alpha-channel-opacity"></hr>
         <p className="colorPara">
         At Unicon Pharma, we know you want to be a successful, innovative leader in your industry, capable of bringing life-changing medicines, therapies, and products to market. In order to do that, you need the best and brightest talent in Life Sciences working for you. But the problem is, these candidates are difficult to identify, whether in-house or externally. We believe you deserve a hiring partner who truly understands your business and who empowers you to hire with confidence.

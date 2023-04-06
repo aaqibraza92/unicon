@@ -41,16 +41,16 @@ const Validation = () => {
         <Container>
           <Row className="align-items-center">
             <Col lg={6} md={6}>
-              <p className="fs22 colorBlue mb20">
+              <p className="fs22 mobFs15 colorBlue mb20">
               With years of combined experience and understanding of pharmaceuticals, biotechnology and medical device industries, Unicon Pharma provides best-in-class staffing and recruiting support to all validation projects, big and small. </p>
             
-              <p className="fs22 colorBlue mb20">
+              <p className="fs22 mobFs15 colorBlue mb20">
               Our validation team understands the extreme importance of ensuring the reliability and integrity of business information and delivers top talent that takes your projects through completion. </p>
             
             </Col>
             <Col lg={6} md={6}>
               <img
-                src={require("../../../assets/img/clinicaloperations.jpg")}
+                src={require("../../../assets/img/Validation.png")}
                 className="img-fluid radius"
                 alt="Preclinical"
               />
@@ -63,16 +63,16 @@ const Validation = () => {
         <Container>
           <Row className="align-items-center justify-content-center">
             <Col lg={9} md={9}>
-              <h2 className="colorBlue text-center fs36 fBold mb50">
+              <h2 className="colorBlue text-center fs36 mobFs21 fBold mb50 mobmb30">
               Our team can assist in finding best-in-class talent within the following functional areas:
               </h2>
             </Col>
           </Row>
 
-          <Row className="align-items-center">
+          <Row className="align-items-center mobilereverse">
             <Col lg={6} md={6}>
               <img
-                src={require("../../../assets/img/ClinicalOperations.png")}
+                src={require("../../../assets/img/Validationsecond.png")}
                 className="img-fluid radius"
                 alt="Preclinical"
               />
@@ -95,7 +95,7 @@ const Validation = () => {
         <Container>
           <Row className="align-items-center justify-content-center">
             <Col lg={9} md={9}>
-              <h2 className="colorBlue text-center fs36 fBold mb50">
+              <h2 className="colorBlue text-center fs36 mobFs21 fBold mb50 mobmb30">
                 Below is a snapshot of searches we assisted
               </h2>
             </Col>
@@ -115,7 +115,7 @@ const Validation = () => {
 
                 <div className="d-flex justify-content-center mt30">
                 <a className="btnTheme bgGreen mr12" href="/">Find Talent</a>
-                <a className="btnTheme bgBlue" href="/">Find Jobs</a>
+                <a className="btnTheme bgBlue" href="/open-industry-jobs">Find Jobs</a>
                 </div>
               </Row>
             </Col>

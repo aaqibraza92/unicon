@@ -13,12 +13,12 @@ const WhatWeDo = () => {
   return (
     <section className="pt80 pb80">
       <Container>
-        <Row className="align-items-center">
+        <Row className="align-items-center mobilereverse">
           <Col lg={6}>
             <img src={require('../../assets/img/what_we.jpg')} className='img-fluid' alt="what we do" />
           </Col>
           <Col lg={6} className="intro-content">
-            <h2 className="colorBlue fs36 fBold mb30">What We Do</h2>
+            <h2 className="colorBlue fs36 mobFs28 fBold mb30">What We Do</h2>
             <hr class="wp-block-separator has-alpha-channel-opacity"></hr>
             <p className="fs16 colorPara">
               At Unicon Pharma, we focus exclusively on Life Sciences—nothing
@@ -44,10 +44,10 @@ const WhatWeDo = () => {
               ))}
             </ul>
 
-            <Link to="#" className="btnTheme bgGreen mr12">
+            <Link to="/about-us" className="btnTheme bgGreen mr12">
             Find Out More About Us
             </Link>
-            <Link to="#" className="btnTheme bgBlue ">
+            <Link to="/contact-us" className="btnTheme bgBlue ">
             Contact Us
             </Link>
           </Col>

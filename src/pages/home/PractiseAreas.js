@@ -46,7 +46,7 @@ const PractiseAreas = () => {
         className="pt80 pb80 practicalArea"
         style={{ background: `require('../../assets/img/area_bg.jpg')` }}
       >
-        <h2 className="colorBlue fs36 fBold text-center mb30">
+        <h2 className="colorBlue fs36 fBold  mobFs28 text-center mb30">
           Practice Areas
         </h2>
         <Container>
@@ -55,7 +55,7 @@ const PractiseAreas = () => {
               <Col lg={3} md={3} xs={6} key={i}>
                 <div className="wrapperArea d-flex align-items-center">
                   <img src={e.img.default} alt={e.title} />
-                  <span className="ml12 colorPara fs18">{e.title}</span>
+                  <span className="ml12 colorPara fs18 mobFs12">{e.title}</span>
                 </div>
               </Col>
             ))}

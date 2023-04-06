@@ -12,6 +12,15 @@
 }
 
 @media only screen and (max-width: 767px) {
+    body .mobFs9{
+      font-size: 9px;
+    }
+    body .mobFs11{
+      font-size: 11px;
+    }
+    body .mobFs12{
+      font-size: 12px;
+    }
     body .mobFs14{
       font-size: 14px;
     }
@@ -74,6 +83,9 @@
       font-size: 33px;
     }  body .mobFs34{
       font-size: 34px;
+    }
+    body .fs16 {
+      font-size: 15px;
     }
 
 }

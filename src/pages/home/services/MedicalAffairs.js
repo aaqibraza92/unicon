@@ -42,12 +42,12 @@ const MedicalAffairs = () => {
         <Container>
           <Row className="align-items-center">
             <Col lg={6} md={6}>
-              <p className="fs22 colorBlue mb20">
+              <p className="fs22 mobFs15 colorBlue mb20">
                 With years of experience, Unicon Pharma has gained reputation as
                 niche resource to medical affairs and communications groups at
                 various companies, big and small.{" "}
               </p>
-              <p className="fs22 colorBlue">
+              <p className="fs22 mobFs15 colorBlue">
                 Whether it’s contract staff augmentation, project teams,
                 contract to hire or direct hire resources, Unicon Pharma can
                 assist your organization to meet your goals.{" "}
@@ -55,7 +55,7 @@ const MedicalAffairs = () => {
             </Col>
             <Col lg={6} md={6}>
               <img
-                src={require("../../../assets/img/clinicaloperations.jpg")}
+                src={require("../../../assets/img/Medical.png")}
                 className="img-fluid radius"
                 alt="Preclinical"
               />
@@ -68,17 +68,17 @@ const MedicalAffairs = () => {
         <Container>
           <Row className="align-items-center justify-content-center">
             <Col lg={9} md={9}>
-              <h2 className="colorBlue text-center fs36 fBold mb50">
+              <h2 className="colorBlue text-center fs36 mobFs21 fBold mb50 mobmb30">
                 Our team can assist in finding best-in-class talent within the
                 following functional areas:
               </h2>
             </Col>
           </Row>
 
-          <Row className="align-items-center">
+          <Row className="align-items-center mobilereverse">
             <Col lg={6} md={6}>
               <img
-                src={require("../../../assets/img/ClinicalOperations.png")}
+                src={require("../../../assets/img/Medicalsecond.png")}
                 className="img-fluid radius"
                 alt="Preclinical"
               />
@@ -101,7 +101,7 @@ const MedicalAffairs = () => {
         <Container>
           <Row className="align-items-center justify-content-center">
             <Col lg={9} md={9}>
-              <h2 className="colorBlue text-center fs36 fBold mb50">
+              <h2 className="colorBlue text-center fs36 mobFs21 fBold mb50 mobmb30">
                 Below is a snapshot of searches we assisted
               </h2>
             </Col>
@@ -123,7 +123,7 @@ const MedicalAffairs = () => {
                   <a className="btnTheme bgGreen mr12" href="/">
                     Find Talent
                   </a>
-                  <a className="btnTheme bgBlue" href="/">
+                  <a className="btnTheme bgBlue" href="/open-industry-jobs">
                     Find Jobs
                   </a>
                 </div>
