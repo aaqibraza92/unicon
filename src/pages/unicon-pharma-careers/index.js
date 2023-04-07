@@ -38,7 +38,7 @@ const UniconPharmaCareers = () => {
               <h2 className="colorBlue fs36 fBold mb30">
                 Working With Unicon Pharma
               </h2>
-              <hr class="wp-block-separator has-alpha-channel-opacity"></hr>
+              <hr className="wp-block-separator has-alpha-channel-opacity"></hr>
               <p className="fs16 colorPara">
                 At Unicon Pharma, we leverage our experienced sales and
                 recruiting teams, vast client network, and relationship-first
@@ -99,7 +99,7 @@ const UniconPharmaCareers = () => {
           <h3 className="fBold fs36 colorBlue">Coming Soon</h3>
         </Container>
       </section>
-      <Counter class="breadCrumb"/>
+      <Counter className="breadCrumb"/>
     </>
   );
 };

@@ -11,6 +11,15 @@
   }
   body .btnTheme {
     background: #000;
+    padding: 12px 22px 12px 22px;
+    border-radius: 30px;
+    color: #fff;
+    line-height: 15px;
+    font-size: 15px;
+  }
+
+  body .btnMob.btnTheme{
+    background: #000;
     padding: 7px 12px 7px 12px;
     border-radius: 30px;
     color: #fff;

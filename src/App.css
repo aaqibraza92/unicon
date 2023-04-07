@@ -183,6 +183,10 @@ border-color: #000
 }
 
 @media only screen and (max-width: 767px) {
+  body .formSection{
+    margin-top: 0px;
+    padding-top: 30px;
+  }
   .Mobileteamimage img {
     width: 50%;
     margin-bottom: 15px;
@@ -216,4 +220,11 @@ border-color: #000
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--colorGreen);
+}
+
+.contentArea ul {
+  margin-bottom: 0px;
+}
+.intro-content-second hr {
+  right: calc(0rem - 15px);
 }

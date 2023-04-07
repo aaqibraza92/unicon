@@ -6,11 +6,7 @@ import RouterList from "./helpers/Routes/RoutesList";
 import { useEffect } from "react";
 
 function App() {
-  const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
   return (
     <div className="wrapperApp">
       <Routes>

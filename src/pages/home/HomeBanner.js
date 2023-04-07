@@ -20,10 +20,10 @@ const HomeBanner = () => {
                 </h1>
 
                 <div className="d-flex">
-                    <Link to="/contact-us" className="btnTheme bgGreen mr12 fMedium">
+                    <Link to="/contact-us" className="btnTheme bgGreen mr12 fMedium btnMob">
                     Find Talent
                     </Link>
-                    <Link to="/open-industry-jobs" className="btnTheme bgBlue fMedium">
+                    <Link to="/open-industry-jobs" className="btnTheme bgBlue fMedium btnMob">
                     Find Jobs
                     </Link>
                 </div>  

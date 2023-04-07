@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Col, Container, Row } from "reactstrap";
 import "../../assets/css/header.css";
 import { angleDownIcon, burgerMenu, closeIcon } from "../../assets/svg/Svg";
 
 const Header = () => {
-  const [mobToggle, setmobToggle] = useState(false);
+  const { pathname } = useLocation();
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+
   const [screenWidth, setScreenWidth] = useState(window.screen.width);
   const resizeScreen = () => {
     setScreenWidth(window.innerWidth);
@@ -18,6 +25,7 @@ const Header = () => {
     };
   });
 
+
   const [stickyHeader, setstickyHeader] = useState("");
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -28,14 +36,25 @@ const Header = () => {
         setstickyHeader("topUp");
       }
     });
+    document.getElementById('triggerToOpen').addEventListener('click', event => {
+        document.getElementById('myNav').classList.add('enableMobileMenu');
+        
+      });
+
+      document.getElementById('closeMenu').addEventListener('click', event => {
+        document.getElementById('myNav').classList.remove('enableMobileMenu');
+        
+      })
+    
+
   }, []);
   return (
     <header className={`transition ${stickyHeader}`}>
-      <div id="myNav" className={`overlay ${mobToggle ? 'enableMobileMenu' : ''}`}>
-        <button className="closebtn noBtn" onClick={()=>setmobToggle(false)}>
+      <div id="myNav" className={`overlay`}>
+        <button id='closeMenu' className="closebtn noBtn" >
           {closeIcon}
         </button>
-        <div class="overlay-content">
+        <div className="overlay-content">
           <Navbar />
         </div>
       </div>
@@ -55,7 +74,7 @@ const Header = () => {
           <Col lg={9} md={9} xs={6}>
             {screenWidth < 1024 && (
               <div className="d-flex justify-content-end">
-                <button onClick={()=>setmobToggle(true)} className="noBtn triggerMenu">{burgerMenu}</button>
+                <button id="triggerToOpen"  className="noBtn triggerMenu">{burgerMenu}</button>
               </div>
             )}
             {screenWidth > 1024 && <Navbar />}
@@ -68,11 +87,21 @@ const Header = () => {
 
 export default Header;
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+  useEffect(()=>{
+    document.querySelectorAll('.clickToClose').forEach(item => {
+      item.addEventListener('click', event => {
+        document.getElementById('myNav').classList.remove('enableMobileMenu');
+        
+      })
+    })
+  },[])
+
   return (
     <ul className="noUl d-flex flex-wrap headerMenu mb0 align-items-center justify-content-end">
       <li>
-        <Link to="/" className="colorPara">
+        <Link to="/" className="colorPara clickToClose">
           Home
         </Link>
       </li>
@@ -82,16 +111,16 @@ const Navbar = () => {
         </Link>
         <ul className="subMenu">
           <li>
-            <Link to="/about-us">About Us</Link>
+            <Link to="/about-us" className="clickToClose">About Us</Link>
           </li>
           <li>
-            <Link to="/what-we-do">What We Do</Link>
+            <Link to="/what-we-do" className="clickToClose">What We Do</Link>
           </li>
           <li>
-            <Link to="/our-team">Our Team </Link>
+            <Link to="/our-team" className="clickToClose">Our Team </Link>
           </li>
           <li>
-            <Link to="/core-values">Core Values </Link>
+            <Link to="/core-values" className="clickToClose">Core Values </Link>
           </li>
         </ul>
       </li>
@@ -102,28 +131,28 @@ const Navbar = () => {
         </Link>
         <ul className="subMenu">
           <li>
-            <Link to="/preclinical-scientific">Preclinical & Scientific</Link>
+            <Link to="/preclinical-scientific" className="clickToClose">Preclinical & Scientific</Link>
           </li>
           <li>
-            <Link to="/clinical-operations">Clinical Operations</Link>
+            <Link to="/clinical-operations" className="clickToClose">Clinical Operations</Link>
           </li>
           <li>
-            <Link to="/biometrics">Biometrics </Link>
+            <Link to="/biometrics" className="clickToClose">Biometrics </Link>
           </li>
           <li>
-            <Link to="/regulatory-affairs">Regulatory Affairs </Link>
+            <Link to="/regulatory-affairs" className="clickToClose">Regulatory Affairs </Link>
           </li>
           <li>
-            <Link to="/drug-safety-pv">Drug Safety/PV </Link>
+            <Link to="/drug-safety-pv" className="clickToClose">Drug Safety/PV </Link>
           </li>
           <li>
-            <Link to="/medical-affairs">Medical Affairs</Link>
+            <Link to="/medical-affairs" className="clickToClose">Medical Affairs</Link>
           </li>
           <li>
-            <Link to="/quality-compliance">Quality & Compliance </Link>
+            <Link to="/quality-compliance" className="clickToClose">Quality & Compliance </Link>
           </li>
           <li>
-            <Link to="/validation">Validation</Link>
+            <Link to="/validation" className="clickToClose">Validation</Link>
           </li>
         </ul>
       </li>
@@ -134,10 +163,10 @@ const Navbar = () => {
         </Link>
         <ul className="subMenu">
           <li>
-            <Link to="/open-industry-jobs">Open Industry Jobs </Link>
+            <Link to="/open-industry-jobs" className="clickToClose">Open Industry Jobs </Link>
           </li>
           <li>
-            <Link to="/unicon-pharma-careers">Unicon Pharma Jobs</Link>
+            <Link to="/unicon-pharma-careers" className="clickToClose">Unicon Pharma Jobs</Link>
           </li>
         </ul>
       </li>
@@ -147,15 +176,15 @@ const Navbar = () => {
         </Link>
         <ul className="subMenu">
           <li>
-            <Link to="/blogs">Articles</Link>
+            <Link to="/blogs" className="clickToClose">Articles</Link>
           </li>
           <li>
-            <Link to="/unicon-pharma-careers">Unicon Pharma Jobs</Link>
+            <Link to="/unicon-pharma-careers" className="clickToClose">Unicon Pharma Jobs</Link>
           </li>
         </ul>
       </li>
       <li>
-        <Link to="/contact-us" className="colorPara">
+        <Link to="/contact-us" className="colorPara clickToClose">
           Contact Us
         </Link>
       </li>

@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import BreadCrumb from "../../components/BreadCrumb";
 import Location from "./Location";
 import { Col, Container, Row } from "reactstrap";
-import Select from "react-select";
+
 import { Helmet } from "react-helmet";
+import LookingForJob from "./LookingForJob";
+import LookingForTalent from "./LookingForTalent";
 const ContactUs = () => {
-  const [sortby, setsortby] = useState("");
-  const [jobtype, setjobtype] = useState("");
+  const [switcher, setswitcher] = useState(false);
 
   return (
     <>
@@ -42,144 +43,32 @@ const ContactUs = () => {
               <ul className="noUl d-inline-flex tabbStyle justify-content-center">
                 <li>
                   <button
-                    className={`transition active colorGreen`}
-                    onClick={() => {}}
+                    className={`transition  colorGreen ${!switcher && 'active'}`}
+                    onClick={() => setswitcher(false)}
                   >
                     LOOKING FOR A JOB?
                   </button>
                 </li>
                 <li>
                   <button
-                    className={`transition colorGreen`}
-                    onClick={() => {}}
+                    className={`transition colorGreen ${switcher && 'active'}`}
+                    onClick={() => setswitcher(true)}
                   >
                     LOOKING FOR TALENT?
                   </button>
                 </li>
               </ul>
             </div>
+          {
+            !switcher &&  <LookingForJob/>
+          }
+          {
+            switcher &&  <LookingForTalent/>
+          }
+           
 
-            <Row>
-              <Col lg={4} md={4}>
-                <div className="mb25">
-                  <Select
-                    classNamePrefix="themeSelect"
-                    className="themeSelect"
-                    options={[
-                      { value: "Lorem1", label: "Lorem1" },
-                      { value: "Lorem2", label: "Lorem2" },
-                    ]}
-                    value={sortby}
-                    placeholder={<div>Choose your nearest office *</div>}
-                    onChange={(e) => setsortby(e)}
-                    //isMulti={true}
-                  />
-                </div>
-              </Col>
-              <Col lg={4} md={4}>
-                <div className="mb25">
-                  <input
-                    type="text"
-                    className="inputTheme w-100"
-                    placeholder="Title"
-                  />
-                </div>
-              </Col>
-              <Col lg={4} md={4}>
-                <div className="mb25">
-                  <input
-                    type="text"
-                    className="inputTheme w-100"
-                    placeholder="First Name *"
-                  />
-                </div>
-              </Col>
-              <Col lg={4} md={4}>
-                <div className="mb25">
-                  <input
-                    type="text"
-                    className="inputTheme w-100"
-                    placeholder="Last Name *"
-                  />
-                </div>
-              </Col>
-              <Col lg={4} md={4}>
-                <div className="mb25">
-                  <input
-                    type="text"
-                    className="inputTheme w-100"
-                    placeholder="Contact Number *"
-                  />
-                </div>
-              </Col>
-              <Col lg={4} md={4}>
-                <div className="mb25">
-                  <input
-                    type="text"
-                    className="inputTheme w-100"
-                    placeholder="E-mail *"
-                  />
-                </div>
-              </Col>
-              <Col lg={12} md={12}>
-                <div className="mb25">
-                  <input
-                    type="text"
-                    className="inputTheme w-100"
-                    placeholder="What role are you looking for? *"
-                  />
-                </div>
-              </Col>
-
-              <Col lg={6} md={6}>
-                <div className="mb25">
-                  <Select
-                    classNamePrefix="themeSelect"
-                    className="themeSelect"
-                    options={[
-                      { value: "Lorem1", label: "Lorem1" },
-                      { value: "Lorem2", label: "Lorem2" },
-                    ]}
-                    value={jobtype}
-                    placeholder={<div>Job type *</div>}
-                    onChange={(e) => setsortby(e)}
-                    //isMulti={true}
-                  />
-                </div>
-              </Col>
-              <Col lg={6} md={6}>
-                <div className="mb25">
-                  <Row className="align-items-center">
-                    <Col lg={3} md={3}>
-                      <div className="fs14 fBold colorBlue">Upload Resume</div>
-                    </Col>
-
-                    <Col lg={9} md={9}>
-                      <label
-                        htmlFor="fileUpload"
-                        className="cursor fileUploadTheme w-100 d-flex justify-content-between"
-                      >
-                        <span className="colorPara">No file chosen</span>{" "}
-                        <span className="chooseFile">Choose File</span>
-                      </label>
-                      <input id="fileUpload" className="d-none" type="file" />
-                    </Col>
-                  </Row>
-                </div>
-              </Col>
-
-              <Col lg={12}>
-                <p className="fs14 colorPara mt27">
-                  By Registering, You Confirm That You Agree To The Processing
-                  Of Your Personal Data As Described In Our Privacy Policy
-                </p>
-
-                <div className="mt30 d-flex justify-content-between">
-                  <div></div>
-                  <button className="noBtn bgBlue btnTheme">Submit</button>
-                </div>
-              </Col>
-            </Row>
+          
+           
           </div>
         </Container>
       </section>

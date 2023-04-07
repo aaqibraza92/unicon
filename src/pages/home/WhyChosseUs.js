@@ -21,7 +21,7 @@ const WhyChosseUs = () => {
           </Col>
           <Col lg={6} className="intro-content">
             <h2 className="colorBlue fs36 fBold mobFs28 mb30">Why Choose Us</h2>
-            <hr class="wp-block-separator has-alpha-channel-opacity"></hr>
+            <hr className="wp-block-separator has-alpha-channel-opacity"></hr>
             <ul className="noUl mb30">
               {data.map((e, i) => (
                 <li className="d-flex align-items-center mb15" key={i}>

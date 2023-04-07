@@ -52,3 +52,18 @@
   }
 }
 
+
+.swiper-button-prev::after{
+  background: url('../img/arrow_left.svg') !important;
+  background-repeat: no-repeat !important;
+  content: "" !important;
+  height: 30px;
+width: 50px;
+}
+.swiper-button-next::after{
+  background: url('../img/arrow_right.svg') !important;
+  background-repeat: no-repeat !important;
+  content: "" !important;
+  height: 30px;
+width: 50px;
+}

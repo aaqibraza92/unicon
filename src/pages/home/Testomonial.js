@@ -1,13 +1,10 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper";
-import "swiper/css";
-import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "swiper/css/autoplay";
+import "swiper/css";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 
 
 let data=[
@@ -29,9 +26,6 @@ let data=[
     position: "Manager, Human Resources",
     img: require("../../assets/img/user.png"),
   },
- 
-  
-
 ]
 
 const Testomonial = () => {
@@ -42,44 +36,48 @@ const Testomonial = () => {
         <h2 className="colorBlue fs36 fBold mb30 mobFs28"> About Unicon Pharma</h2>
 
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
+          slidesPerView={2}
+          spaceBetween={30}
+          navigation={true}
+          pagination={false}
           loop={true}
           speed={2000}
+          
           autoplay={{ delay: 1000 }}
-          spaceBetween={30}
-          slidesPerView={4}
-          onSlideChange={() => {}}
-          onSwiper={() => {}}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          className="mySwiper"
           breakpoints={{
-            // when window width is >= 640px
             300: {
               width: 300,
               slidesPerView: 1,
             },
-            // when window width is >= 768px
             550: {
               width: 550,
-              slidesPerView: 2,
-            },
-            992: {
-              width: 992,
-              slidesPerView: 2,
-            },
-            1201: {
-              width: 1201,
-              slidesPerView: 2,
-            },
-            1360: {
-              width: 1360,
-              slidesPerView: 2,
-            },
+              slidesPerView: 1,
+            }
+          
           }}
         >
-          
-          {
-            data.map((e,i)=>(
-              <div className="mx-5" key={`sli${i}`}>
+          {/* {Array(12)
+            .fill()
+            .map(() => (
               <SwiperSlide>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Voluptate sapiente, dolor earum nihil illo aut nulla magnam
+                tempora voluptatem eligendi placeat accusamus quod, fugiat
+                corporis consequatur omnis odio alias reiciendis. Quae unde
+                delectus inventore sed blanditiis sunt numquam. Ipsam nobis
+                asperiores natus aliquid sapiente officia libero dignissimos,
+                voluptatum maiores laborum quas consectetur vel corrupti minus
+                eveniet
+              </SwiperSlide>
+            ))} */}
+
+            {
+            data.map((e,i)=>(
+              <SwiperSlide key={`sl_${i}`}>
               <div className="radius20 bgWhite pt30 pb30 pl30 pr30 testimonialWrapper">
                 <p className="colorPara fs16 lh28 mb0">
                 {e.para}
@@ -104,12 +102,10 @@ const Testomonial = () => {
 
            
             </SwiperSlide>
-              </div>
 
              
             ))
           }
-          
         </Swiper>
       </Container>
     </section>
