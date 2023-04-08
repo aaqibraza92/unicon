@@ -29,4 +29,10 @@
   .pagination {
     margin-bottom: 35px;
   }
-  
+  .insight {
+    border: 1px solid #ddd;
+  }
+  .catUl {
+    list-style-type: disclosure-closed;
+    list-style-position: inside;
+  }

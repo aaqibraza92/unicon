@@ -4,11 +4,14 @@ import "./helpers/Global/GCss/index";
 import { Route, Routes, useLocation } from "react-router-dom";
 import RouterList from "./helpers/Routes/RoutesList";
 import { useEffect } from "react";
+import AlertModal from "./components/AlertModal/AlertModal";
 
 function App() {
 
   return (
-    <div className="wrapperApp">
+    <>
+      <AlertModal/>
+      <div className="wrapperApp">
       <Routes>
         {RouterList &&
           RouterList.map((elem, ind) => {
@@ -16,6 +19,8 @@ function App() {
           })}
       </Routes>
     </div>
+    </>
+
   );
 }
 

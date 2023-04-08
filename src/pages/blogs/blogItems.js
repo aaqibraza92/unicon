@@ -1,17 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
-import { Col, Row } from "reactstrap";
+import { Col, Container, Row } from "reactstrap";
 import { timeIcon } from "../../assets/svg/Svg";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import axios from "axios";
-import { BLOG_URL, HOME_URL } from "../../helpers/apiurls";
+import { BLOG_URL, CAT_URL, HOME_URL } from "../../helpers/apiurls";
 import Pagination, {
   bootstrap5PaginationPreset,
 } from "react-responsive-pagination";
 
 
 const BlogItems = () => {
-
+  const [allCategory, setAllCategory] = useState("");
   const navigation = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const [postData, setPostData] = useState("");
@@ -32,7 +32,7 @@ const BlogItems = () => {
   const [loading, setloading] = useState(true);
   useEffect(() => {
     loadAllPosts();
-    // loadCategory();
+    loadCategory();
   }, [currentPage]);
 
   const setCurrentPageHandle = (val) => {
@@ -41,24 +41,24 @@ const BlogItems = () => {
     window.scrollTo(0, 0);
   };
 
-  // const loadCategory = async () => {
-  //   const options = {
-  //     method: "GET",
-  //     headers: {
-  //       Accept: "application/json",
-  //     },
-  //   };
+  const loadCategory = async () => {
+    const options = {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+    };
 
-  //   await axios
-  //     .get(category,
-  //       options
-  //     )
-  //     .then((res) => {
-  //       if (res?.status === 200) {
-  //         setAllCategory(res?.data);
-  //       }
-  //     });
-  // };
+    await axios
+      .get(HOME_URL+CAT_URL,
+        options
+      )
+      .then((res) => {
+        if (res?.status === 200) {
+          setAllCategory(res?.data);
+        }
+      });
+  };
 
   const loadAllPosts = async () => {
     const options = {
@@ -93,6 +93,47 @@ const BlogItems = () => {
           ></div>
         </div>
       )}
+
+      
+      <section className="mt80">
+        <Container>
+          <Row>
+            <Col lg={8} md={8}></Col>
+            <Col lg={4} md={4}>
+              <input
+                type="text"
+                className="inputTheme w-100"
+                placeholder="Search keyword"
+              />
+              <div className="d-flex justify-content-end mt20">
+              <button className="btnTheme bgBlue fMedium btnMob">
+                Search
+              </button>
+              </div>
+
+              <div className="insight radius12">
+            <h4 className="fs20 colorBlue fBold pt20 pb20 pl20 pr20 mb0 borderBottom">
+            Insights
+            </h4>
+            <ul className="catUl pt20 pb20 pl20 pr20 ">
+            {
+              allCategory.length > 0 && allCategory.map((e,i)=>(
+                <li key={i} className="mb10">
+                  <Link className="fs15 colorBlue" to={e.slug}>{e.name}</Link>
+                </li>
+              ))
+            }
+            </ul>
+        
+            {
+              console.log(allCategory)
+            }
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
    <Row className="gy-4 gx-4 mb60">
       {postData.length > 0 && postData?.map((e, i) => (
           <Col lg={4} md={4} xs={12} key={i}>

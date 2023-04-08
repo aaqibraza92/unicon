@@ -5,6 +5,8 @@ import { checkSvg } from "../../assets/svg/Svg";
 import Counter from "../home/Counter";
 import { Helmet } from "react-helmet";
 import AccordionUI from "../../components/Accordion";
+import AlertModal from "../../components/AlertModal/AlertModal";
+import LookingForTalent from "../contact-us/LookingForTalent";
 let data = [
   "Competitive hourly rate",
   "Contributory medical, dental, and vision insurance",
@@ -128,7 +130,12 @@ const UniconPharmaCareers = () => {
           },
         ]}
       />
-          <h3 className="fBold fs36 colorBlue">Coming Soon</h3>
+
+      <section className="mt60">
+        <button className="btnTheme bgGreen mr12 fMedium btnMob" onClick={()=>AlertModal.show(<LookingForTalent/>,'Looking for talent?',()=>{},'xl')}>
+        Apply Now
+        </button>
+      </section>
         </Container>
       </section>
       <Counter className="breadCrumb"/>

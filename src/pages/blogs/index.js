@@ -19,20 +19,6 @@ const Blogs = () => {
         ]}
       />
 
-      <section className="mt80">
-        <Container>
-          <Row>
-            <Col lg={8} md={8}></Col>
-            <Col lg={4} md={4}>
-              <input
-                type="text"
-                className="inputTheme w-100"
-                placeholder="Search keyword"
-              />
-            </Col>
-          </Row>
-        </Container>
-      </section>
 
       <section className="mt30">
         <Container>

@@ -19,7 +19,7 @@
   position: sticky;
   width: 100%;
   top: 0px;
-  z-index: 99999999;
+  z-index: 999;
   background: #fff;
   -webkit-box-shadow: 0px 10px 60px #b0bac554;
   box-shadow: 0px 10px 60px #b0bac554;
