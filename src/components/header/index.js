@@ -36,15 +36,15 @@ const Header = () => {
         setstickyHeader("topUp");
       }
     });
-    document.getElementById('triggerToOpen').addEventListener('click', event => {
-        document.getElementById('myNav').classList.add('enableMobileMenu');
-        
-      });
+    document.getElementById('triggerToOpen')!==null && document.getElementById('triggerToOpen').addEventListener('click', event => {
+      document.getElementById('myNav').classList.add('enableMobileMenu');
+      
+    });
 
-      document.getElementById('closeMenu').addEventListener('click', event => {
-        document.getElementById('myNav').classList.remove('enableMobileMenu');
-        
-      })
+    document.getElementById('closeMenu')!==null && document.getElementById('closeMenu').addEventListener('click', event => {
+      document.getElementById('myNav').classList.remove('enableMobileMenu');
+      
+    })
     
 
   }, []);
@@ -90,7 +90,7 @@ export default Header;
 const Navbar = (props) => {
 
   useEffect(()=>{
-    document.querySelectorAll('.clickToClose').forEach(item => {
+    document.querySelectorAll('.clickToClose').length > 0 && document.querySelectorAll('.clickToClose').forEach(item => {
       item.addEventListener('click', event => {
         document.getElementById('myNav').classList.remove('enableMobileMenu');
         
