@@ -26,6 +26,7 @@ import Validation from "../../pages/home/services/Validation";
 import OpenIndustryJobs from "../../pages/open-industry-jobs";
 import UniconPharmaCareers from "../../pages/unicon-pharma-careers";
 import BlogSingle from "../../pages/blogs/BlogSingle";
+import BlogCategory from "../../pages/Category";
 
 const GetRoute = ({ isprivate: isPrivate, page: Page, ...rest }) => {
 
@@ -94,6 +95,11 @@ let RouterList = [
   {
     element: <GetRoute isprivate={false} role="Default" page={BlogSingle} />,
     path: "/blog/:slug/",
+    isAdmin: false,
+  },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={BlogCategory} />,
+    path: "/category/:name/",
     isAdmin: false,
   },
   {

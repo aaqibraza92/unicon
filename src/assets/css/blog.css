@@ -36,3 +36,12 @@
     list-style-type: disclosure-closed;
     list-style-position: inside;
   }
+  .catUl > li a:hover{
+    color: var(--colorGreen);
+  }
+  .overlaypText {
+    position: absolute;
+    background: rgba(255,255,255,0.8);
+    right: 4%;
+    width: 50%;
+  }
