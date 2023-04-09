@@ -13,9 +13,9 @@ const HomeBanner = () => {
       <div className="caption position-absolute w-100">
         <Container>
           <Row>
-            <Col lg={5}>
+            <Col lg={5} md={8}>
               <div>
-                <h1 className="fs50 mobFs17 mobwidth50 mobmb0 mobmr0 fSemiBold text-start colorBlue ml0">
+                <h1 className="fs50 tabfs24 mobFs17 mobwidth50 mobmb0 mobmr0 fSemiBold text-start colorBlue ml0">
                   The Best & Brightest in Life Sciences. Working for You.
                 </h1>
 

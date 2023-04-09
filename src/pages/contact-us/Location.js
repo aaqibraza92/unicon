@@ -33,9 +33,9 @@ const Location = () => {
     <section className="pt80 pb80">
       <Container>
         <h2 className="text-center fBold colorBlue fs36 mb36">Our Office Locations</h2>
-        <Row>
+        <Row className="gy-3"> 
           {data.map((e, i) => (
-            <Col key={i} lg={3} md={3} xs={6}>
+            <Col key={i} lg={3} md={6} xs={12}>
               <div className="teamWrapper bgGradient radius20 pb15">
                 <div>
                   <img src={e.img} className="img-fluid w-100" alt="" />

@@ -21,8 +21,8 @@ const CoreValuesPage = () => {
 
       <section className="pt80 pb80">
         <Container>
-          <Row className="m-auto justify-content-center">
-            <Col md="2">
+          <Row className="m-auto gy-4 justify-content-center">
+            <Col md={4} lg={2}>
               <div className="coreValue text-center">
                 <img
                   src={require("../../assets/img/integrity.png")}
@@ -32,7 +32,7 @@ const CoreValuesPage = () => {
                 <p className="fs18 mb-0 mt-2 colorPara fMedium">Integrity</p>
               </div>
             </Col>
-            <Col md="2">
+            <Col md={4} lg={2}>
               <div className="coreValue text-center">
                 <img
                   src={require("../../assets/img/clientfocus.png")}
@@ -42,7 +42,7 @@ const CoreValuesPage = () => {
                 <p className="fs18 mb-0 mt-2 colorPara fMedium">Client Focus</p>
               </div>
             </Col>
-            <Col md="2">
+            <Col md={4} lg={2}>
               <div className="coreValue text-center">
                 <img
                   src={require("../../assets/img/excellence.png")}
@@ -52,7 +52,7 @@ const CoreValuesPage = () => {
                 <p className="fs18 mb-0 mt-2 colorPara fMedium">Excellence</p>
               </div>
             </Col>
-            <Col md="2">
+            <Col md={4} lg={2}>
               <div className="coreValue text-center">
                 <img
                   src={require("../../assets/img/accountability.png")}
@@ -64,7 +64,7 @@ const CoreValuesPage = () => {
                 </p>
               </div>
             </Col>
-            <Col md="2">
+            <Col md={4} lg={2}>
               <div className="coreValue text-center">
                 <img
                   src={require("../../assets/img/teamspiritcollaboration.png")}

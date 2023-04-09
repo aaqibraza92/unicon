@@ -39,7 +39,35 @@
     height: 2.4px;
     opacity: 1;
 }
+@media only screen and (max-width:990px) and (min-width:768px) {
+  .mt80Tab{
+    margin-top: 80px;
+  }
+body .tabfs24{
+  font-size: 24px;
+}
+.intro-content{
+  margin-top: 15px;
+}
+.single_bg .contentArea h2 {
+  padding: 0 20px;
+}
+}
 @media only screen and (max-width:767px) {
+  .single_bg .contentArea h2 {
+    font-size: 20px;
+    line-height: 27px;
+    padding: 0 20px;
+  }
+  .wrapperArea img {
+    width: 29px;
+  }
+  .mobFullWidth {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+  }
   .homeBanner {
     height: 200px;
   }

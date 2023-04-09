@@ -45,3 +45,6 @@
     right: 4%;
     width: 50%;
   }
+  .contentUnder a {
+    color: var(--colorBlue);
+  }

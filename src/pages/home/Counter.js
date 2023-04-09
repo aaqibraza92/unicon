@@ -37,7 +37,7 @@ const Counter = (props) => {
         <Container>
           <Row className="gy-5">
             {data.map((e, i) => (
-              <Col lg={3} key={i}>
+              <Col lg={3} md={6} key={i}>
                 <div className="d-flex align-items-center counterData">
                   <div className="mr15">
                     <img src={e.img} alt="" />

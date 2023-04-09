@@ -106,7 +106,7 @@ const BlogSingle = () => {
                     </h3>
                   }
                  
-                    {e.paragraph && <p className="colorPara">{e.paragraph}</p>}
+                    {e.paragraph && <div className="colorPara contentUnder" dangerouslySetInnerHTML={{ __html: e.paragraph}} />}
                   </div>
                 );
               })}

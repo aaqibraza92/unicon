@@ -48,7 +48,7 @@ const TeamItems = () => {
       <Row className="gy-4 gx-4 mb60">
         {postData.length > 0 &&
           postData.map((e, i) => (
-            <Col lg={3} md={3} xs={6} key={i}>
+            <Col lg={3} md={4} xs={6} key={i}>
               <div className="teamWrapper mobileheight bgGradient radius20 pb15">
                 <div>
                   <Link

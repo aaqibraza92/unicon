@@ -57,7 +57,7 @@ const SingleTeam = () => {
                 />
               </div>
             </Col>
-            <Col lg={9}>
+            <Col lg={9} >
               <h2 className="colorBlue fs36 mobFs21 fBold mb10">
                 {data?.title?.rendered}
               </h2>
@@ -71,7 +71,7 @@ const SingleTeam = () => {
         <Container>
           <Row className="align-items-center">
             <Col lg={3}></Col>
-            <Col lg={9}>
+            <Col lg={9} className="mt80Tab">
               <div className="colorPara">
                 {
                   <div

@@ -44,10 +44,10 @@ const WhatWeDo = () => {
               ))}
             </ul>
 
-            <Link to="/about-us" className="btnTheme bgGreen mr12">
+            <Link to="/about-us" className="btnTheme mobFullWidth bgGreen mr12">
             Find Out More About Us
             </Link>
-            <Link to="/contact-us" className="btnTheme bgBlue ">
+            <Link to="/contact-us" className="btnTheme mobFullWidth bgBlue ">
             Contact Us
             </Link>
           </Col>

@@ -135,7 +135,7 @@ const BlogListings = (props) => {
   };
 
   return (
-    <Col lg={4} md={4} className="">
+    <Col lg={4} md={6} className="">
         <div className="blogWrapper radius12 pb15 transition">
             <div className="featuredImg">
             <Link to={`/blog/${data?.slug}`}> <img
