@@ -179,7 +179,10 @@ const Navbar = (props) => {
             <Link to="/blogs" className="clickToClose">Articles</Link>
           </li>
           <li>
-            <Link to="/unicon-pharma-careers" className="clickToClose">Unicon Pharma Jobs</Link>
+            <Link to="/category/2" className="clickToClose">Industry Insights</Link>
+          </li>
+          <li>
+            <Link to="/category/3" className="clickToClose">White Papers</Link>
           </li>
         </ul>
       </li>

@@ -14,7 +14,7 @@ const Blogs = () => {
         title="Blogs Articles"
         items={[
           { name: "Home", url: "/" },
-          { name: "Resources", url: "/" },
+          { name: "Resources", url: "/blogs" },
           { name: "Articles", url: "" },
         ]}
       />

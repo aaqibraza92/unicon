@@ -1,13 +1,11 @@
 import React from "react";
-import { Col, Container, Row } from "reactstrap";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css";
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import { Container } from "reactstrap";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { arrowLeft, arrowRight } from "../../assets/svg/Svg";
 
-
-let data=[
+let dataTest = [
   {
     para: "I've worked with Unicon Pharma for the last few years. They've been thoroughly professional in their approach and very accommodative. They know the pharmacovigilance business and provide clear, open communication and set precise expectations. I would highly recommend them if you are looking for qualified pharmacovigilance resources.",
     author: "Global Oncology Company",
@@ -26,87 +24,80 @@ let data=[
     position: "Manager, Human Resources",
     img: require("../../assets/img/user.png"),
   },
-]
+];
 
 const Testomonial = () => {
+  var SliderSettings = {
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    prevArrow: arrowLeft,
+    nextArrow: arrowRight,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          adaptiveHeight: true,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 10,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false,
+        },
+      },
+    ],
+  };
+
   return (
     <section className="bgTestimonial pt80 pb80">
       <Container>
         <p className="colorBlue text-uppercase ">WHAT PEOPLE SAY</p>
-        <h2 className="colorBlue fs36 fBold mb30 mobFs28"> About Unicon Pharma</h2>
+        <h2 className="colorBlue fs36 fBold mb30 mobFs28">
+          About Unicon Pharma
+        </h2>
 
-        <Swiper
-          slidesPerView={2}
-          spaceBetween={30}
-          navigation={true}
-          pagination={false}
-          loop={true}
-          speed={2000}
-          
-          autoplay={{ delay: 1000 }}
-          mousewheel={true}
-          keyboard={true}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          className="mySwiper"
-          breakpoints={{
-            300: {
-              width: 300,
-              slidesPerView: 1,
-            },
-            550: {
-              width: 550,
-              slidesPerView: 1,
-            }
-          
-          }}
-        >
-          {/* {Array(12)
-            .fill()
-            .map(() => (
-              <SwiperSlide>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptate sapiente, dolor earum nihil illo aut nulla magnam
-                tempora voluptatem eligendi placeat accusamus quod, fugiat
-                corporis consequatur omnis odio alias reiciendis. Quae unde
-                delectus inventore sed blanditiis sunt numquam. Ipsam nobis
-                asperiores natus aliquid sapiente officia libero dignissimos,
-                voluptatum maiores laborum quas consectetur vel corrupti minus
-                eveniet
-              </SwiperSlide>
-            ))} */}
-
-            {
-            data.map((e,i)=>(
-              <SwiperSlide key={`sl_${i}`}>
+        <Slider className="parentSl" {...SliderSettings}>
+          {dataTest.map((e, i) => (
+            <div key={i} className="pr15 pl15">
               <div className="radius20 bgWhite pt30 pb30 pl30 pr30 testimonialWrapper">
-                <p className="colorPara fs16 lh28 mb0">
-                {e.para}
-                </p>
+                <p className="colorPara fs16 lh28 mb0">{e.para}</p>
                 <div className="mt-3 d-flex align-items-center">
-                <div className="mr15">
-                  <img
-                    src={require("../../assets/img/user.png")}
-                    className="img-fluid"
-                    alt=""
-                  />
-                </div>
-                <div>
-                <p className="colorBlue mb2">{e.author}</p>
-                <p className="halfBlue fs14 mb0">
-                {e.position}
-                </p>
-               
+                  <div className="mr15">
+                    <img
+                      src={require("../../assets/img/user.png")}
+                      className="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <p className="colorBlue mb2">{e.author}</p>
+                    <p className="halfBlue fs14 mb0">{e.position}</p>
+                  </div>
                 </div>
               </div>
-              </div>
-
-           
-            </SwiperSlide>
-
-             
-            ))
-          }
-        </Swiper>
+            </div>
+          ))}
+        </Slider>
       </Container>
     </section>
   );

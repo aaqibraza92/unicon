@@ -228,3 +228,18 @@ border-color: #000
 .intro-content-second hr {
   right: calc(0rem - 15px);
 }
+
+/*slider slick*/
+.parentSl {
+  margin: 0 -15px;
+}
+.slick-slider .slick-prev {
+  top: -40px;
+  right: 56px;
+  left: inherit;
+}
+.slick-slider .slick-next {
+  top: -40px;
+  right: 20px;
+}
+/*slider slick*/
