@@ -43,7 +43,9 @@ const ContactUs = () => {
               <ul className="noUl d-inline-flex tabbStyle justify-content-center">
                 <li>
                   <button
-                    className={`transition  colorGreen ${!switcher && 'active'}`}
+                    className={`transition  colorGreen ${
+                      !switcher && "active"
+                    }`}
                     onClick={() => setswitcher(false)}
                   >
                     LOOKING FOR A JOB?
@@ -51,7 +53,7 @@ const ContactUs = () => {
                 </li>
                 <li>
                   <button
-                    className={`transition colorGreen ${switcher && 'active'}`}
+                    className={`transition colorGreen ${switcher && "active"}`}
                     onClick={() => setswitcher(true)}
                   >
                     LOOKING FOR TALENT?
@@ -59,16 +61,8 @@ const ContactUs = () => {
                 </li>
               </ul>
             </div>
-          {
-            !switcher &&  <LookingForJob/>
-          }
-          {
-            switcher &&  <LookingForTalent/>
-          }
-           
-
-          
-           
+            {!switcher && <LookingForJob />}
+            {switcher && <LookingForTalent />}
           </div>
         </Container>
       </section>
