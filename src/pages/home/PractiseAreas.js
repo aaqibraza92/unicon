@@ -30,7 +30,7 @@ let data = [
   },
   {
     url: '/medical-affairs',
-    img: require("../../assets/img/RegulatoryAffairs.svg"),
+    img: require("../../assets/img/MedicalAffairs.svg"),
     title: "Medical Affairs",
   },
   {
@@ -63,7 +63,7 @@ const PractiseAreas = () => {
             {data.map((e, i) => (
               <Col lg={3} md={4} xs={6} key={i}>
                 <div className="wrapperArea d-flex align-items-center">
-                <Link to={e?.url}  className="d-flex">
+                <Link to={e?.url}  className="d-flex align-items-center">
                 <img src={e.img.default} alt={e.title} />
                   <span className="ml12 colorPara fs18 mobFs12">{e.title}</span>
                 </Link>

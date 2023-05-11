@@ -3,6 +3,7 @@ import BreadCrumb from "../../../components/BreadCrumb";
 import { Col, Container, Row } from "reactstrap";
 import { checkSvg } from "../../../assets/svg/Svg";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 let data = [
   "AE Case Management (intake, triage, case processing, narrative writing, medical assessment and regulatory submission)",
   "Aggregate Reports (PBRERs, DSURs, PADERs, ASRs and others)",
@@ -84,7 +85,7 @@ const DrugSafetyPV = () => {
                 {data.map((e, i) => (
                   <li className="d-flex align-items-center mb12" key={i}>
                     <span className="mr10">{checkSvg}</span>
-                    <span className="colorPara fs16">{e}</span>
+                    <span className="colorPara fs18">{e}</span>
                   </li>
                 ))}
               </ul>
@@ -110,14 +111,19 @@ const DrugSafetyPV = () => {
                   <Col lg={6} key={i}>
                     <div className="d-flex align-items-center mb12" key={i}>
                       <span className="mr10">{checkSvg}</span>
-                      <span className="colorBlue fs16 fBold">{e}</span>
+                      <span className="colorBlue fs18 fBold">{e}</span>
                     </div>
                   </Col>
                 ))}
 
-                <div className="d-flex justify-content-center mt30">
-                <a className="btnTheme bgGreen mr12" href="/">Find Talent</a>
-                <a className="btnTheme bgBlue" href="/open-industry-jobs">Find Jobs</a>
+                
+<div className="d-flex justify-content-center mt30">
+                   <Link to="/contact-us" className="btnTheme bgGreen mr12 fMedium btnMob">
+                    Find Talent
+                    </Link>
+                    <Link to="/open-industry-jobs" className="btnTheme bgBlue fMedium btnMob">
+                    Find Jobs
+                    </Link>
                 </div>
               </Row>
             </Col>

@@ -27,6 +27,7 @@ import OpenIndustryJobs from "../../pages/open-industry-jobs";
 import UniconPharmaCareers from "../../pages/unicon-pharma-careers";
 import BlogSingle from "../../pages/blogs/BlogSingle";
 import BlogCategory from "../../pages/Category";
+import PrivacyPolicy from "../../pages/privacyPolicy";
 
 const GetRoute = ({ isprivate: isPrivate, page: Page, ...rest }) => {
 
@@ -155,6 +156,11 @@ let RouterList = [
   {
     element: <GetRoute isprivate={false} role="Default" page={UniconPharmaCareers} />,
     path: "/unicon-pharma-careers",
+    isAdmin: false,
+  },
+  {
+    element: <GetRoute isprivate={false} role="Default" page={PrivacyPolicy} />,
+    path: "/privacy-policy",
     isAdmin: false,
   },
 

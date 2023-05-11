@@ -21,7 +21,7 @@ let data = [
   },
   {
     img: require("../../assets/img/users_all.png"),
-    end: 1800,
+    end: 180,
     title: "Screened & Qualified Life Sciences Candidates",
   },
 
@@ -37,7 +37,7 @@ const Counter = (props) => {
         <Container>
           <Row className="gy-5">
             {data.map((e, i) => (
-              <Col lg={3} md={6} key={i}>
+              <Col className="subc" lg={3} md={6}  key={i}>
                 <div className="d-flex align-items-center counterData">
                   <div className="mr15">
                     <img src={e.img} alt="" />
@@ -47,9 +47,9 @@ const Counter = (props) => {
                       start={0}
                       end={e.end}
                       duration={3}
-                      suffix="+"
+                      // suffix="+"
                       delay={0}
-                      className="colorBlue fs30 fBold mb0 lh24"
+                      className="colorBlue fs30 fBold mb0 lh24 position-relative countersub"
                     />
                     <p className="mb0 colorPara">{e.title}</p>
                   </div>

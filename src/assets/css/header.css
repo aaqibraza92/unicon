@@ -183,7 +183,7 @@
 
 
 .topDown .mainLogo {
-  width: 103px;
+  width: 180px;
 }
 
 @-webkit-keyframes stickySlideDown {
@@ -218,5 +218,5 @@ header.topDown{
   }
 }
 img.img-fluid.mainLogo {
-  max-width: 112px;
+  max-width: 231px;
 }

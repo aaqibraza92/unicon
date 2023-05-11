@@ -16,15 +16,15 @@ const HomeBanner = () => {
             <Col lg={5} md={8}>
               <div>
                 <h1 className="fs50 tabfs24 mobFs17 mobwidth50 mobmb0 mobmr0 fSemiBold text-start colorBlue ml0">
-                  The Best & Brightest in Life Sciences. Working for You.
+                Connecting the Brightest Minds In Life Sciences
                 </h1>
 
                 <div className="d-flex">
                     <Link to="/contact-us" className="btnTheme bgGreen mr12 fMedium btnMob">
-                    Find Talent
+                    Find talent
                     </Link>
                     <Link to="/open-industry-jobs" className="btnTheme bgBlue fMedium btnMob">
-                    Find Jobs
+                    Find jobs
                     </Link>
                 </div>  
               </div>

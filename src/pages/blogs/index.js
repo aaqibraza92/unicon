@@ -11,7 +11,7 @@ const Blogs = () => {
         <title>Articles | Unicon</title>
       </Helmet>
       <BreadCrumb
-        title="Blogs Articles"
+        title="Articles"
         items={[
           { name: "Home", url: "/" },
           { name: "Resources", url: "/blogs" },

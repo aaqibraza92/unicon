@@ -243,3 +243,28 @@ border-color: #000
   right: 20px;
 }
 /*slider slick*/
+
+
+.subc:nth-child(1) .countersub::after {
+  content: "+";
+  position: relative;
+  left: 3px;
+}
+.subc:nth-child(2) .countersub::after {
+  content: "+";
+  position: relative;
+  left: 3px;
+}
+.subc:nth-child(3) .countersub::after {
+  content: "+";
+  position: relative;
+  left: 3px;
+}
+.subc:nth-child(4) .countersub::after {
+  content: "K";
+  position: relative;
+  left: 3px;
+}
+a {
+  color: #87a90c;
+}

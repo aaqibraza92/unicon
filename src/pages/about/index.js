@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 const AboutUs = () => {
   return (
     <>
-     <Helmet>
+      <Helmet>
         <title>About Us | Unicon</title>
       </Helmet>
       <BreadCrumb

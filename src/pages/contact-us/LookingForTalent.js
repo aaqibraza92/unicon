@@ -3,31 +3,47 @@ import { Col, Row } from "reactstrap";
 import Select from "react-select";
 import axios from "axios";
 import { CONTACT_FORM } from "../../helpers/apiurls";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Link } from "react-router-dom";
+
 const LookingForTalent = () => {
   const [nearOffice, setnearOffice] = useState("");
-  const [title, settitle] = useState("");
+  // const [title, settitle] = useState("");
   const [firstName, setfirstName] = useState("");
   const [lname, setlname] = useState("");
   const [company, setcompany] = useState("");
   const [phone, setphone] = useState("");
   const [email, setemail] = useState("");
   const [mesage, setmesage] = useState("");
-  const [empType, setempType] = useState("");
-
+  // const [empType, setempType] = useState("");
+  const notify = (v) => toast(v);
 
   const onSubmitHandler = (e) => {
 
-    
+ 
+
+    const clearfeilds=()=>{
+      setnearOffice('');
+      // settitle('');
+      setfirstName('');
+      setlname('');
+      setcompany('');
+      setphone('');
+      setemail('');
+      setmesage('');
+      // setempType('');
+    }
     const iData = new FormData();
     iData.append("nearest_office", nearOffice.value);
-    iData.append("Title", title);
+    // iData.append("Title", title);
     iData.append("FirstName", firstName);
     iData.append("LastName", lname);
     iData.append("company", company);
     iData.append("phone", phone);
     iData.append("email", email);
     iData.append("mesage", mesage);
-    iData.append("type", empType.value);
+    // iData.append("type", empType.value);
 
 
 
@@ -40,15 +56,17 @@ const LookingForTalent = () => {
     };
 
     axios.post(CONTACT_FORM + 100 + "/feedback", iData, options).then((res) => {
-      console.log(res);
       if (res && res.status===200) {
-        alert(res?.data?.message);
+        clearfeilds();
+        notify(res?.data?.message);
       }
     });
   };
 
   return (
-    <Row>
+    <>
+       <ToastContainer />
+       <Row>
       <Col lg={4} md={4}>
         <div className="mb25">
           <Select
@@ -63,15 +81,14 @@ const LookingForTalent = () => {
             value={nearOffice}
             placeholder={<div>Choose your nearest office *</div>}
             onChange={(e) => setnearOffice(e)}
-            //isMulti={true}
           />
         </div>
       </Col>
-      <Col lg={4} md={4}>
+      {/* <Col lg={4} md={4}>
         <div className="mb25">
           <input type="text" onChange={(e)=>settitle(e.target.value)} value={title} className="inputTheme w-100" placeholder="Title" />
         </div>
-      </Col>
+      </Col> */}
       <Col lg={4} md={4}>
         <div className="mb25">
           <input
@@ -129,7 +146,7 @@ const LookingForTalent = () => {
           />
         </div>
       </Col>
-      <Col lg={4} md={4}>
+      <Col lg={12} md={12}>
         <div className="mb25">
           <input
             type="text"
@@ -141,7 +158,7 @@ const LookingForTalent = () => {
         </div>
       </Col>
 
-      <Col lg={4} md={4}>
+      {/* <Col lg={4} md={4}>
         <div className="mb25">
           <Select
             classNamePrefix="themeSelect"
@@ -157,12 +174,11 @@ const LookingForTalent = () => {
             //isMulti={true}
           />
         </div>
-      </Col>
+      </Col> */}
 
       <Col lg={12}>
         <p className="fs14 colorPara mt27">
-          By Registering, You Confirm That You Agree To The Processing Of Your
-          Personal Data As Described In Our Privacy Policy
+        By registering, you confirm that you agree to the processing of your personal data as described in our  <Link target='_blank' to="/privacy-policy">privacy policy.</Link>
         </p>
 
         <div className="mt30 d-flex justify-content-between">
@@ -171,6 +187,8 @@ const LookingForTalent = () => {
         </div>
       </Col>
     </Row>
+    </>
+ 
   );
 };
 

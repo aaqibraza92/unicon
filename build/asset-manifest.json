@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b5be673f.css",
-    "main.js": "/static/js/main.78650537.js",
+    "main.css": "/static/css/main.b26e8d90.css",
+    "main.js": "/static/js/main.0a36a4ea.js",
     "static/js/787.49b6d1bc.chunk.js": "/static/js/787.49b6d1bc.chunk.js",
     "static/media/home_banner.jpg": "/static/media/home_banner.a819a68ed24bd8d5cfa7.jpg",
     "static/media/testi.jpg": "/static/media/testi.e2048f95c81623e5d383.jpg",
@@ -34,11 +34,13 @@
     "static/media/chicago.png": "/static/media/chicago.aca4597d50fd0ec4f9c5.png",
     "static/media/clinicaloperations.jpg": "/static/media/clinicaloperations.d9ed91f5fb75f2469886.jpg",
     "static/media/jersey.png": "/static/media/jersey.4f9ecbb782d7cb3c7bc5.png",
+    "static/media/Infograpgic.png": "/static/media/Infograpgic.43578380bb41e09c4582.png",
     "static/media/Axiforma-Regular.woff": "/static/media/Axiforma-Regular.2b258adf3be92e4cc1ad.woff",
     "static/media/linkd.png": "/static/media/linkd.4676ba41c9d04b5bcca8.png",
     "static/media/user.png": "/static/media/user.2e791e89cf7ecc54aa9a.png",
-    "static/media/placeholder.jpg": "/static/media/placeholder.53d46b4cf8c56ab47609.jpg",
-    "static/media/logo.png": "/static/media/logo.99495dcb5143c5d6a464.png",
+    "static/media/footer_logo.png": "/static/media/footer_logo.70705cac550882b2dd2a.png",
+    "static/media/logo.png": "/static/media/logo.70705cac550882b2dd2a.png",
+    "static/media/user2.jpg": "/static/media/user2.0016c5cb3506c6698e4b.jpg",
     "static/media/bag.svg": "/static/media/bag.2545df30f969473bfa087ad8736e17cf.svg",
     "static/media/Biometrics.svg": "/static/media/Biometrics.bd38d2c072d7ae88d27f073da90c68e3.svg",
     "static/media/clinical.svg": "/static/media/clinical.bc04b41a77acdd767c89f577f8b03396.svg",
@@ -51,15 +53,16 @@
     "static/media/qualityCompliance.svg": "/static/media/qualityCompliance.9b17dcf2eb4edb41541c86c5857bf261.svg",
     "static/media/Validation.svg": "/static/media/Validation.7240fe83bb0184db91941d53cdffa853.svg",
     "static/media/drug.svg": "/static/media/drug.1faa851dce336f2a7119e5e045e249ae.svg",
+    "static/media/MedicalAffairs.svg": "/static/media/MedicalAffairs.345acac33fc869df4451323ed0a9ffda.svg",
     "index.html": "/index.html",
     "static/media/arrow_right.svg": "/static/media/arrow_right.a4f6dad4a9ca8105997f.svg",
     "static/media/arrow_left.svg": "/static/media/arrow_left.da457baf95cbd2a9f13c.svg",
-    "main.b5be673f.css.map": "/static/css/main.b5be673f.css.map",
-    "main.78650537.js.map": "/static/js/main.78650537.js.map",
+    "main.b26e8d90.css.map": "/static/css/main.b26e8d90.css.map",
+    "main.0a36a4ea.js.map": "/static/js/main.0a36a4ea.js.map",
     "787.49b6d1bc.chunk.js.map": "/static/js/787.49b6d1bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5be673f.css",
-    "static/js/main.78650537.js"
+    "static/css/main.b26e8d90.css",
+    "static/js/main.0a36a4ea.js"
   ]
 }

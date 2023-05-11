@@ -16,7 +16,7 @@ const ContactUs = () => {
       </Helmet>
       <BreadCrumb
         title="Contact Us"
-        subTitle="We’re Here to Help. Let’s Connect."
+        subTitle="We’re here to help. let’s connect."
         items={[
           { name: "Home", url: "/" },
           { name: "Contact Us", url: "" },
@@ -31,9 +31,7 @@ const ContactUs = () => {
                 <div className="text-center mb30">
                   <h2 className="fBold colorBlue fs36 ">Get In touch</h2>
                   <p className="colorPara fs17">
-                    Whether You’re A Professional Looking For A Job Or A
-                    Business Seeking Highly Skilled Talent, The Team At Unicon
-                    Are Here For You.
+                  Whether you’re a professional looking for a job or a business seeking highly skilled talent, the team at Unicon are here for you.
                   </p>
                 </div>
               </Col>

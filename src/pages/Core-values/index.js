@@ -19,10 +19,17 @@ const CoreValuesPage = () => {
         ]}
       />
 
-      <section className="pt80 pb80">
+      <section className="pt80">
         <Container>
-          <Row className="m-auto gy-4 justify-content-center">
-            <Col md={4} lg={2}>
+          <Row className="m-auto justify-content-center">
+              <Col className="text-center" md={12}>
+                <img
+                    src={require("../../assets/img/Infograpgic.png")}
+                    className="img-fluid"
+                    alt="Infograpgic"
+                  />
+              </Col>
+            {/* <Col md={4} lg={2}>
               <div className="coreValue text-center">
                 <img
                   src={require("../../assets/img/integrity.png")}
@@ -75,7 +82,7 @@ const CoreValuesPage = () => {
                   Team Spirit & Collaboration
                 </p>
               </div>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </section>

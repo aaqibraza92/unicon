@@ -71,7 +71,7 @@ const BlogSingle = () => {
         </div>
 
         <div className="mt36 mb40 singleImg w-100">
-          <Container>
+          {/* <Container>
             <img
               className="radius12 w-100"
               src={
@@ -81,7 +81,7 @@ const BlogSingle = () => {
               }
               alt={postData && postData?.title?.rendered}
             />
-          </Container>
+          </Container> */}
         </div>
       </section>
 
@@ -94,7 +94,7 @@ const BlogSingle = () => {
           </div>
         )}
 
-        <Row className="justify-content-center mb50">
+        <Row className="justify-content-center mb50 mt50">
           <Col lg={10}>
             {acfData.length > 0 &&
               acfData?.map((e, i) => {

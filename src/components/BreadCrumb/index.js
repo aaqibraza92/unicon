@@ -4,14 +4,14 @@ import { angleRight } from "../../assets/svg/Svg";
 
 const BreadCrumb = (props) => {
   return (
-    <section className="breadCrumb text-center bgcover d-flex align-items-center justify-content-center pt80 pb80">
+    <section className="breadCrumb text-center bgcover d-flex align-items-center justify-content-center pt70 pb70">
       <div className="contentArea">
         <h2 className="colorBlue fs36 mobFs22 fBold">{props?.title}</h2>
         {props.subTitle && (
           <p className="mt15 colorGreen fs20">{props.subTitle}</p>
         )}
 
-        {props?.items && (
+        {/* {props?.items && (
           <ul className="noUl d-flex justify-content-center">
             {props?.items.map((e, i) => (
               <li key={i} className="mr10 mobmr5 mobFs10 colorPara">
@@ -26,7 +26,7 @@ const BreadCrumb = (props) => {
               </li>
             ))}
           </ul>
-        )}
+        )} */}
       </div>
     </section>
   );

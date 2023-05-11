@@ -55,7 +55,7 @@ const Footer = () => {
                       to="/blogs"
                       className="colorWhite fs15 fRegular itemLightwhite"
                     >
-                      Blogs
+                      Resources 
                     </Link>
                   </li>
                   <li>
@@ -102,7 +102,7 @@ const Footer = () => {
                       to="#"
                       className="colorWhite fs15 fRegular itemLightwhite"
                     >
-                      Maryland
+                       North Carolina 
                     </Link>
                   </li>
                 </ul>
@@ -115,7 +115,7 @@ const Footer = () => {
                     <div className="d-flex">
                       <span className="mr12">{locationSvg}</span>
                       <span className="colorWhite fs15 fRegular itemLightwhite">
-                        51 Cragwood Rd Suite 101 South Plainfield, New Jersey
+                        51 Cragwood Rd Suite 101<br></br> South Plainfield, New Jersey
                         07080
                       </span>
                     </div>
@@ -148,17 +148,17 @@ const Footer = () => {
 
                 <ul className="noUl socailMedia d-flex">
                   <li className="mr20">
-                    <a href="#" target="_blank">
+                    <a href="https://www.facebook.com/uniconpharma/" target="_blank">
                       {fb}
                     </a>
                   </li>
                   <li className="mr20">
-                    <a href="#" target="_blank">
+                    <a href="https://twitter.com/uniconpharma" target="_blank">
                       {twitter}
                     </a>
                   </li>
                   <li>
-                    <a href="#" target="_blank">
+                    <a href="https://www.linkedin.com/company/unicon-pharma/?viewAsMember=true" target="_blank">
                       {linkdin}
                     </a>
                   </li>
