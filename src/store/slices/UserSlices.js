@@ -3,13 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const UserSlice= createSlice({
     name: 'usersData',
     initialState: {
-        userList: []
+        cntType: ""
     },
     reducers:{
-        addUsers(state,action){
-            state.userList.push({
-                name: action.payload
-            })
+        contactType(state,action){
+            state.cntType=action.payload
         },
         removeUsers(state,action){
 
@@ -28,4 +26,4 @@ const UserSlice= createSlice({
 //console.log(UserSlice);
 
 export default UserSlice.reducer;
-export const {addUsers,removeUsers,deleteAllUsers,updateUsers} =UserSlice.actions; // this is action creator yani iske zarye store per data post hoga
+export const {contactType,removeUsers,deleteAllUsers,updateUsers} =UserSlice.actions; // this is action creator yani iske zarye store per data post hoga

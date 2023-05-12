@@ -6,8 +6,14 @@ import { Col, Container, Row } from "reactstrap";
 import { Helmet } from "react-helmet";
 import LookingForJob from "./LookingForJob";
 import LookingForTalent from "./LookingForTalent";
-const ContactUs = () => {
-  const [switcher, setswitcher] = useState(false);
+import { useSelector } from "react-redux";
+const ContactUs = (props) => {
+  const selector= useSelector((state)=>{
+    return state
+});
+
+console.log(selector?.type?.cntType);
+  const [switcher, setswitcher] = useState(selector?.type?.cntType==="talent" ? true : false);
 
   return (
     <>
