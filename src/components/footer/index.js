@@ -11,18 +11,18 @@ const Footer = () => {
     <footer>
       <Container>
         <Row className="gy-5">
-          <Col lg={2}>
+          <Col lg={4}>
             <Link to="/">
               <img
-                className="img-fluid footer_logo"
+                className="img-fluid footer_logo w-50"
                 src={require("../../assets/img/footer_logo.png")}
                 alt="logo"
               />
             </Link>
           </Col>
-          <Col lg={7} >
+          <Col lg={8} >
             <Row className="gy-3">
-              <Col lg={3} sm={4} xs={6}>
+              <Col lg={4} sm={4} xs={6}>
                 <h3 className="colorWhite fs20 fMedium mb15">Useful Links</h3>
 
                 <ul className="noUl">
@@ -69,7 +69,7 @@ const Footer = () => {
                 </ul>
               </Col>
 
-              <Col lg={3} sm={4} xs={6}>
+              <Col lg={4} sm={4} xs={6}>
                 <h3 className="colorWhite fs20 fMedium mb15">Our Locations</h3>
 
                 <ul className="noUl">
@@ -107,7 +107,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </Col>
-              <Col sm={4} lg={6}>
+              <Col  sm={4} lg={4}>
                 <h3 className="colorWhite fs20 fMedium mb15">Contact Us</h3>
 
                 <ul className="noUl">
@@ -167,14 +167,14 @@ const Footer = () => {
             </Row>
           </Col>
 
-          <Col lg={3}>
+          {/* <Col lg={3}>
           <h3 className="colorWhite fs20 fMedium mb15">{linkdinColor} <span className="ml5">Linkedin Feed</span></h3>
             <img
               className="img-fluid"
               src={require("../../assets/img/linkd.png")}
               alt="logo"
             />
-          </Col>
+          </Col> */}
         </Row>
       </Container>
 

@@ -23,7 +23,7 @@ const HomeBanner = () => {
           <Row>
             <Col lg={5} md={8}>
               <div>
-                <h1 className="fs50 tabfs24 mobFs17 mobwidth50 mobmb0 mobmr0 fSemiBold text-start colorBlue ml0">
+                <h1 className="fs50 tabfs24 mobFs18 mobwidth50 mobmb0 mobmr0 fSemiBold text-start colorBlue ml0">
                   Connecting the Brightest Minds In Life Sciences
                 </h1>
 

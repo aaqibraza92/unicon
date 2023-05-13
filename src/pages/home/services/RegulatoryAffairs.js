@@ -73,7 +73,7 @@ const RegulatoryAffairs = () => {
         </Container>
       </section>
 
-      <section className="bgTestimonial pt80 pb0">
+      <section className="bgTestimonial pt80 pb80">
         <Container>
           <Row className="align-items-center justify-content-center">
             <Col lg={9} md={9}>

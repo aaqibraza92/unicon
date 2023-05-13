@@ -76,7 +76,7 @@ const LookingForTalent = () => {
               { value: "New Jersey", label: "New Jersey" },
               { value: "Boston", label: "Boston" },
               { value: "Chicago", label: "Chicago" },
-              { value: "Maryland", label: "Maryland" }
+              { value: "North Carolina", label: "North Carolina" }
             ]}
             value={nearOffice}
             placeholder={<div>Choose your nearest office *</div>}
