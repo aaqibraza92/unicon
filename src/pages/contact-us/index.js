@@ -35,7 +35,7 @@ console.log(selector?.type?.cntType);
             <Row className="justify-content-center">
               <Col lg={7}>
                 <div className="text-center mb30">
-                  <h2 className="fBold colorBlue fs36 ">Get In touch</h2>
+                  <h2 className="fBold colorBlue mobFs28  fs36 ">Get In touch</h2>
                   <p className="colorPara fs17">
                   Whether you’re a professional looking for a job or a business seeking highly skilled talent, the team at Unicon are here for you.
                   </p>

@@ -99,11 +99,7 @@ const BlogCategory = () => {
 
           {postData.length > 0 &&
             postData.map((item, ind) => {
-              if (ind === 0) {
-                return "";
-              } else {
-                return    <BlogListings key={ind} data={item} />
-              }
+              return    <BlogListings key={ind} data={item} />
             })}
 
           <Pagination

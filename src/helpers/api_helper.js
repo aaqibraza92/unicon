@@ -4,7 +4,7 @@ import Auth from "./Auth/Auth"
 const token = "Bearer "+Auth.getToken();
 
 //apply base url for axios
-const API_URL = "https://showcase.demobw.com/webapi/api"
+const API_URL = "https://uniconpharma.com/webadmin/"
 
 const axiosApi = axios.create({
   baseURL: API_URL,

@@ -14,7 +14,7 @@ const Footer = () => {
           <Col lg={2}>
             <Link to="/">
               <img
-                className="img-fluid"
+                className="img-fluid footer_logo"
                 src={require("../../assets/img/footer_logo.png")}
                 alt="logo"
               />

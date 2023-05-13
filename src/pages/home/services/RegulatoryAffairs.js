@@ -4,6 +4,8 @@ import { Col, Container, Row } from "reactstrap";
 import { checkSvg } from "../../../assets/svg/Svg";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { contactType } from "../../../store/slices/UserSlices";
 let data = [
   "Global Regulatory Strategy ",
   "Regulatory Operations and Submissions",
@@ -25,6 +27,12 @@ let data2 = [
 ];
 
 const RegulatoryAffairs = () => {
+  const dispatch= useDispatch();
+
+  const contactTypeHandle=(v)=>{
+    dispatch(contactType(v));
+  }
+
   return (
     <>
       <Helmet>
@@ -122,10 +130,10 @@ const RegulatoryAffairs = () => {
 
                 
 <div className="d-flex justify-content-center mt30">
-                   <Link to="/contact-us" className="btnTheme bgGreen mr12 fMedium btnMob">
+                   <Link to="/contact-us" onClick={()=>contactTypeHandle("talent")}  className="btnTheme bgGreen mr12 fMedium btnMob">
                     Find Talent
                     </Link>
-                    <Link to="/open-industry-jobs" className="btnTheme bgBlue fMedium btnMob">
+                    <Link to="/contact-us" onClick={()=>contactTypeHandle("job")} className="btnTheme bgBlue fMedium btnMob">
                     Find Jobs
                     </Link>
                 </div>

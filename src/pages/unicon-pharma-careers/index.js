@@ -29,7 +29,7 @@ const UniconPharmaCareers = () => {
       />
       <section className="pt80 pb80">
         <Container>
-          <Row className="align-items-center">
+          <Row className="align-items-center mobilereverse ">
             <Col lg={6}>
               <img
                 src={require("../../assets/img/what_we.jpg")}
@@ -38,7 +38,7 @@ const UniconPharmaCareers = () => {
               />
             </Col>
             <Col lg={6} className="intro-content">
-              <h2 className="colorBlue fs36 fBold mb30">
+              <h2 className="colorBlue fs36 mobFs28  fBold mb30">
                 Working With Unicon Pharma
               </h2>
               <hr className="wp-block-separator has-alpha-channel-opacity"></hr>
@@ -70,7 +70,7 @@ const UniconPharmaCareers = () => {
 
       <section className="pt20 pb20">
         <Container>
-          <h2 className="colorBlue fs36 fBold mb30">We Are Currently Hiring</h2>
+          <h2 className="colorBlue fs36  mobFs28  fBold mb30">We Are Currently Hiring</h2>
           <p className="fs16 colorPara">
             Unicon Pharma seeks talent from diverse backgrounds and invests
             heavily in your training and development to ensure you succeed in

@@ -32,7 +32,7 @@ const Location = () => {
   return (
     <section className="pt80 pb80">
       <Container>
-        <h2 className="text-center fBold colorBlue fs36 mb36">Our Office Locations</h2>
+        <h2 className="text-center fBold colorBlue mobFs28 fs36 mb36">Our Office Locations</h2>
         <Row className="gy-3"> 
           {data.map((e, i) => (
             <Col key={i} lg={3} md={6} xs={12}>

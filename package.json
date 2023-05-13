@@ -1,5 +1,6 @@
 {
   "name": "unicon",
+  "homepage": "https://uniconpharma.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

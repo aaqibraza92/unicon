@@ -36,7 +36,7 @@ const HomeBanner = () => {
                     Find talent
                   </Link>
                   <Link
-                    to="/open-industry-jobs"
+                    to="/contact-us"
                     className="btnTheme bgBlue fMedium btnMob"
                     onClick={()=>contactTypeHandle("job")}
                   >
