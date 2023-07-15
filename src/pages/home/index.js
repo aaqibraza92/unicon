@@ -12,8 +12,7 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Home | Unicon</title>
-    
+        <title>Unicon Pharma - Life Sciences Staffing & Recruitment</title>
       </Helmet>
     <main>
     <HomeBanner/>

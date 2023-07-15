@@ -187,7 +187,7 @@ const LookingForJob = () => {
 
     <Col lg={12}>
       <p className="fs14 colorPara mt27">
-      By registering, you confirm that you agree to the processing of your personal data as described in our  <Link target='_blank' to="/privacy-policy">privacy policy.</Link>
+      By registering, you confirm that you agree to the processing of your personal data as described in our  <Link to="/privacy-policy">privacy policy.</Link>
       </p>
 
       <div className="mt30 d-flex justify-content-between">

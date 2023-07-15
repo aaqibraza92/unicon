@@ -48,9 +48,9 @@ let data = [
 const PractiseAreas = () => {
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Preclinical & Scientific | Unicon</title>
-      </Helmet>
+      </Helmet> */}
       <section
         className="pt80 pb80 practicalArea"
         style={{ background: `require('../../assets/img/area_bg.jpg')` }}
