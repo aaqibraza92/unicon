@@ -268,3 +268,9 @@ border-color: #000
 a {
   color: #87a90c;
 }
+.validation {
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
+  margin-left: 2px;
+}
