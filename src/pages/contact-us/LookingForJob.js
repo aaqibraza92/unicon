@@ -18,7 +18,14 @@ const LookingForJob = () => {
     const [mesage, setmesage] = useState("");
     const [jobType, setjobType] = useState("");
     const [resume, setresume] = useState("");
+    const [fileName, setfileName] = useState("");
     const notify = (v) => toast(v);
+
+    const uploadHandle=(e)=>{
+      setresume(e.target.files[0]);
+      setfileName(e.target.files[0].name);
+      
+    }
 
 
     const clearfeilds=()=>{
@@ -58,7 +65,6 @@ const LookingForJob = () => {
       };
   
       axios.post(CONTACT_FORM + 101 + "/feedback", iData, options).then((res) => {
-        console.log(res);
         if (res && res.status===200) {
          clearfeilds();
           notify(res?.data?.message);
@@ -70,28 +76,7 @@ const LookingForJob = () => {
     <>
     <ToastContainer />
     <Row>
-    {/* <Col lg={4} md={4}>
-      <div className="mb25">
-      <Select
-            classNamePrefix="themeSelect"
-            className="themeSelect"
-            options={[
-              { value: "New Jersey", label: "New Jersey" },
-              { value: "Boston", label: "Boston" },
-              { value: "Chicago", label: "Chicago" },
-              { value: "Maryland", label: "Maryland" }
-            ]}
-            value={nearOffice}
-            placeholder={<div>Choose your nearest office *</div>}
-            onChange={(e) => setnearOffice(e)}
-          />
-      </div>
-    </Col>
-    <Col lg={4} md={4}>
-      <div className="mb25">
-      <input type="text" onChange={(e)=>settitle(e.target.value)} value={title} className="inputTheme w-100" placeholder="Title" />
-      </div>
-    </Col> */}
+
     <Col lg={6} md={6}>
       <div className="mb25">
         <input
@@ -176,10 +161,10 @@ const LookingForJob = () => {
               htmlFor="fileUpload"
               className="cursor fileUploadTheme w-100 d-flex justify-content-between"
             >
-              <span className="colorPara">No file chosen</span>{" "}
+              <span className="colorPara">{fileName==="" ? "No file chosen" : fileName }</span>
               <span className="chooseFile">Choose File</span>
             </label>
-            <input id="fileUpload" className="d-none" type="file" onChange={(e)=>setresume(e.target.files[0])} />
+            <input id="fileUpload" className="d-none" type="file" onChange={(e)=>uploadHandle(e)} />
           </Col>
         </Row>
       </div>
