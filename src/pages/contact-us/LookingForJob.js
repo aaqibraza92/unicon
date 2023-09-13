@@ -19,6 +19,7 @@ const LookingForJob = () => {
   const [jobType, setjobType] = useState("");
   const [resume, setresume] = useState("");
   const [fileName, setfileName] = useState("");
+  const [loader, setloader] = useState(false);
   const notify = (v) => toast(v);
 
   const uploadHandle=(e)=>{
@@ -93,7 +94,7 @@ if (!jobType) {
   isValid = false
 }
 if (!resume) {
-  validations.resume = 'Please upload resume, Pdf or image format'
+  validations.resume = 'Please upload resume, Pdf, Doc. or image format'
   isValid = false
 }
     if (!isValid) {
@@ -111,6 +112,7 @@ if (!resume) {
     if (!isValid) {
       return false;
     }
+    setloader(true);
 
     const iData = new FormData();
     // iData.append("nearest_office", nearOffice.value);
@@ -122,7 +124,7 @@ if (!resume) {
     iData.append("email", email);
     iData.append("mesage", mesage);
     iData.append("job_type", jobType.value);
-    iData.append("file-65", resume);
+    iData.append("resume", resume);
 
     const options = {
       method: "POST",
@@ -137,6 +139,7 @@ if (!resume) {
       if (res && res.status === 200) {
         clearfeilds();
         notify(res?.data?.message);
+        setloader(false);
       }
     });
   };
@@ -296,7 +299,7 @@ if (!resume) {
             <div className="mt30 d-flex justify-content-between">
               <div></div>
               <button type="submit" className="noBtn bgBlue btnTheme">
-                Submit
+                 {loader ? "Sending..." : "Submit"}
               </button>
             </div>
           </Col>
