@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BreadCrumb from "../../components/BreadCrumb";
 import { Col, Container, Row } from "reactstrap";
 import { checkSvg } from "../../assets/svg/Svg";
@@ -7,6 +7,8 @@ import { Helmet } from "react-helmet";
 import AccordionUI from "../../components/Accordion";
 import AlertModal from "../../components/AlertModal/AlertModal";
 import LookingForTalent from "../contact-us/LookingForTalent";
+import { HOME_URL, UNICON_PHARMA_FAQ } from "../../helpers/apiurls";
+import axios from "axios";
 let data = [
   "Competitive hourly rate",
   "Contributory medical, dental, and vision insurance",
@@ -14,11 +16,34 @@ let data = [
   "Employee Referral Bonus",
 ];
 const UniconPharmaCareers = () => {
+  const [postData, setPostData] = useState([]);
+  const [loading, setloading] = useState(true);
+  useEffect(()=>{
+    loadFaq()
+  },[])
+  const loadFaq = async () => {
+    const options = {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+    };
+
+    await axios.get(`${UNICON_PHARMA_FAQ}`, options).then((res) => {
+      if (res && res.status === 200) {
+        setPostData(res?.data?.acf?.faq_repeater);
+        setloading(false);
+
+      }
+    });
+  };
+
   return (
     <>
        <Helmet>
         <title>Unicon Pharma Careers | Unicon</title>
       </Helmet>
+     
       <BreadCrumb
         title="Unicon Pharma Careers"
         items={[
@@ -99,30 +124,11 @@ const UniconPharmaCareers = () => {
       </section>
       <section className="text-center pt80 pb80">
         <Container>
-        <AccordionUI
-        data={[
-    
-         
-
-          // {
-          //   title: "Drug Safety Specialist",
-          //   description: "Unicon Pharma Inc. has job openings for Validation Engineer. Jobs located in South Plainfield, NJ and various unanticipated locations throughout the U.S. Analyze validation test data to determine whether systems or processes have met validation criteria and to identify root causes of problems for various pharma and other facilities. Prepare validation and performance qualification protocols for new or modified processes, systems, or equipment for various production types. Coordinate the implementation or scheduling of validation testing with affected departments and personnel. Create, populate, and maintain databases for tracking validation activities, test results, and validate systems. Travel/relocate to various unanticipated locations throughout the U.S. for long and short term assignments at client sites. Requires Master’s degree or foreign equivalent in Regulatory Affairs, Pharmaceutical Sciences, Management, Pharmacy, Chemistry, Biochemistry, Engineering (any), Biology, or a related life sciences discipline. Offered salary $106,000 P/Y. Email resume with cover letter to hr@uniconpharma.com; Job 23UPI04; EOE",
-          // },
           {
-            title: "Research Consultant",
-            description: "Unicon Pharma, Inc. has job openings for Research Consultant. Jobs located in South Plainfield, NJ and various unanticipated locations throughout the U.S. Identifying and selecting an investigator who will be responsible for the conduct of the trial at the trial site. Liaising with doctors/consultants or investigators on conducting the trial. Setting up the trial sites, which includes ensuring each center has the trial materials, including the trial drug often known as the investigational medicinal product. Training the study staff in standard operating procedure for the clinical trials as per applicable regulatory requirements. Verify that investigator and investigator’s team are adequately trained and comply with the protocol. Monitoring the trial throughout specified duration involving monitoring visit to the trial sites. Informed consent form review, case report form review, investigational drug accountability, and adverse event review. Ensuring all unused trial supplies are accounted for. Writing visit reports, filing and collecting trial documentation and reports. Travel/relocate to various unanticipated locations throughout the U.S. for long and short term assignments at client sites. Requires Master’s degree or foreign equivalent in Computer Science, Engineering (any), Business Administration, Life Sciences, Information Technology, or related. Travel and work at client sites as assigned. Email resume with cover letter to hr@uniconpharma.com; Job 23UPI09; EOE",
-          },
-          {
-            title: "Drug Safety Specialist",
-            description: "Unicon Pharma, Inc. has job openings for Drug Safety Specialist. Jobs located in South Plainfield, NJ and various unanticipated locations throughout the U.S.  Execute strategic plans within multiple projects and prioritize in accordance with strategy. Analyze clinical trial data, write reports, and determine pharmaceutical drugs’ safety. Identify issues and contribute to remediation plans. Implement and generate data reports and listings. Travel/relocate to various unanticipated locations throughout the U.S. for long and short term assignments at client sites. Requires Master’s degree or foreign equivalent in Pharmacy, Chemistry, Nursing, Life Sciences, Healthcare, Healthcare Administration, Business Administration, Management, or related. Travel and work at client sites as assigned. Email resume with cover letter to hr@uniconpharma.com; Job 23UPI08; EOE            ",
-          },
-          {
-            title: "Lead Validation Engineer",
-            description: "Unicon Pharma, Inc. has job openings for Lead Validation Engineer. Jobs located in South Plainfield, NJ and various unanticipated locations throughout the U.S. Prepare and execute validation protocols for new and modified systems such as equipment and software. Study product characteristics and customer requirements and confer with management to determine validation objectives and standards. Create, populate, and maintain databases for tracking validation activities, test results, and validated systems. Identify deviations and defects from established product and process standards and provide recommendations for resolving deviations. Prepare, maintain, and review validation and compliance documentation such as engineering change notices, schematics, protocols, and summary reports. Travel/relocate to various unanticipated locations throughout the U.S. for long and short-term assignments at client sites. Requires Bachelor’s degree or foreign equivalent in Computer Science, Engineering (any), or related and 5 years of experience in the job offered or as a Computer Software Professional. Will also accept Master’s Degree or foreign equivalent in Computer Science, Engineering (any), or related and 3 years of experience in the job offered or as a Computer Software Professional. Email resume with cover letter to hr@uniconpharma.com; Job 23UPI11; EOE",
+            loading && <h3>Loading...</h3>
           }
-
-     
-        ]}
+        <AccordionUI
+        data={postData}
       />
 
       <section className="mt60">
