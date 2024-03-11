@@ -7,15 +7,17 @@
   height: 100%;
   object-fit: cover;
 }
-.blogWrapper {
-    border: 1px solid #ddd;
+
+  .blogWrapper {
+    border-width: 2px;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     -o-border-radius: 12px;
     border-radius: 12px;
     min-height: 320px;
+    border-style: solid;
+    border-image: linear-gradient(#174D72, transparent) 30;
   }
-
   .featuredImg img {
     -webkit-border-radius: 12px 12px 0 0;
     border-radius: 12px 12px 0 0;
