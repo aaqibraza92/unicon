@@ -11,15 +11,13 @@ const Blogs = () => {
         <title>Articles | Unicon</title>
       </Helmet>
       <BreadCrumb
-        title="Articles"
+        title="Insights"
         items={[
           { name: "Home", url: "/" },
           { name: "Resources", url: "/blogs" },
-          { name: "Articles", url: "" },
+          { name: "Insights", url: "" },
         ]}
       />
-
-
       <section className="mt30">
         <Container>
           <BlogItems />

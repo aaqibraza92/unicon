@@ -13,6 +13,7 @@
     -moz-border-radius: 12px;
     -o-border-radius: 12px;
     border-radius: 12px;
+    min-height: 320px;
   }
 
   .featuredImg img {
@@ -47,4 +48,33 @@
   }
   .contentUnder a {
     color: var(--colorBlue);
+  }
+  .btnGreenLight{
+    background: #BCE8A9;
+    color: #174600;
+    padding: 10px 18px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .btnGreenLight:hover{
+    background: var(--colorBlue);
+    color: #fff;
+  }
+  .buttonAct {
+    bottom: 22px;
+  }
+
+  .selBox::after {
+    content: "";
+    position: absolute;
+    right: 8px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #1c1c1c;
+    top: 15px;
   }
