@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3613fa57.css",
-    "main.js": "/static/js/main.33bc1c08.js",
+    "main.css": "/static/css/main.34048b26.css",
+    "main.js": "/static/js/main.7e3bc6b7.js",
     "static/js/787.49b6d1bc.chunk.js": "/static/js/787.49b6d1bc.chunk.js",
     "static/media/home_banner.jpg": "/static/media/home_banner.a819a68ed24bd8d5cfa7.jpg",
     "static/media/testi.jpg": "/static/media/testi.e2048f95c81623e5d383.jpg",
@@ -46,22 +46,22 @@
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "index.html": "/index.html",
     "static/media/RegulatoryAffairs.svg": "/static/media/RegulatoryAffairs.cb548df94928abee7efc7622f28c5bcb.svg",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "static/media/practical.svg": "/static/media/practical.2f554f5330022549b89abf02e195732f.svg",
     "static/media/qualityCompliance.svg": "/static/media/qualityCompliance.7550a314a108588461383a0e30a10fc6.svg",
-    "index.html": "/index.html",
     "static/media/Validation.svg": "/static/media/Validation.5e0821d4fbb2f1b0003de54e252b8e2d.svg",
     "static/media/drug.svg": "/static/media/drug.83ff7fcfe866a90c44a20db4d7247f41.svg",
     "static/media/MedicalAffairs.svg": "/static/media/MedicalAffairs.4243ec954e74fa952a07058ff9964b82.svg",
     "static/media/arrow_right.svg": "/static/media/arrow_right.a4f6dad4a9ca8105997f.svg",
     "static/media/arrow_left.svg": "/static/media/arrow_left.da457baf95cbd2a9f13c.svg",
-    "main.3613fa57.css.map": "/static/css/main.3613fa57.css.map",
-    "main.33bc1c08.js.map": "/static/js/main.33bc1c08.js.map",
+    "main.34048b26.css.map": "/static/css/main.34048b26.css.map",
+    "main.7e3bc6b7.js.map": "/static/js/main.7e3bc6b7.js.map",
     "787.49b6d1bc.chunk.js.map": "/static/js/787.49b6d1bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3613fa57.css",
-    "static/js/main.33bc1c08.js"
+    "static/css/main.34048b26.css",
+    "static/js/main.7e3bc6b7.js"
   ]
 }

@@ -12,6 +12,7 @@ import Pagination, {
 
 const BlogItems = () => {
   const [allCategory, setAllCategory] = useState("");
+  const [catHandle, setcatHandle] = useState("");
   const navigation = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const [postData, setPostData] = useState("");
@@ -42,9 +43,15 @@ const BlogItems = () => {
 
   const [loading, setloading] = useState(true);
   useEffect(() => {
-    loadAllPosts();
+
     loadCategory();
-  }, [currentPage]);
+    if (catHandle !== "") {
+      postOfCategory()
+    } else {
+      loadAllPosts();
+    }
+
+  }, [currentPage, catHandle]);
 
   const setCurrentPageHandle = (val) => {
     setcurrentPage(val);
@@ -93,17 +100,40 @@ const BlogItems = () => {
     });
   };
 
+  const postOfCategory = async () => {
+    const options = {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+    };
+    setloading(true);
+    await axios
+      .get(
+        HOME_URL + BLOG_URL +
+        "?categories=" +
+        catHandle +
+        "&per_page=18&page=" +
+        currentPage,
+        options
+      )
+      .then((res) => {
+        if (res && res.status === 200) {
+          setPostData(res?.data);
+          setloading(false);
+
+          setTotalPage(res?.headers["x-wp-totalpages"]);
+          setTotalCount(res?.headers["x-wp-total"]);
+          if (currentPage !== 1) {
+            navigation(`/category/4/?page=${currentPage}`);
+          }
+        }
+      });
+  };
+
+
   return (
     <>
-      {loading && (
-        <div className="d-flex justify-content-center">
-          <div
-            className="spinner-border text-secondary"
-            style={{ width: "3rem", height: "3rem" }}
-            role="status"
-          ></div>
-        </div>
-      )}
 
 
       {/* <section className="mt80">
@@ -173,26 +203,36 @@ const BlogItems = () => {
 
       </section> */}
 
-      <Row>
-        <Col lg={4} md={6} xs={12}>
-          <div className="mb30 mt30 position-relative selBox">
-          <select name="Data" id="" className="form-control ">
-            <option value="">Our Categories</option>
-            <option value="articles">Articles</option>
-            <option value="industry-insights">Industry Insights</option>
-            <option value="white-papers">White Papers</option>
-          </select>
-          </div>
-       
-        </Col>
-      </Row>
+      {
+        loading ? <Row className="gy-4 mb-5"> {Array(8).fill().map((e, i) => (
+          <Col key={i} lg={4} md={4} sm={4}><div className="skeleton" style={{ height: "300px" }}></div></Col>
 
-      <Row className="gy-4 gx-4 mb60">
-        {postData.length > 0 && postData?.map((e, i) => (
-          screenWidth > 1024 ? (currentPage === 1 && i !== 0) &&
-            <Col lg={4} md={6} xs={12} key={i}>
-              <div className="blogWrapper radius12 pb15 transition position-relative">
-                {/* <div className="featuredImg">
+        ))}</Row> :
+          <>
+
+            <Row>
+              <Col lg={4} md={6} xs={12}>
+                <div className="mb30 mt30 position-relative selBox">
+                  <select name="Data" id="" className="form-control" onChange={(e) => setcatHandle(e.target.value)}>
+                    {
+                      allCategory.length > 0 && allCategory.map((e, i) => (
+                        e.name !== 'Uncategorized' &&
+                        <option key={i} value={e?.id}>{e?.name}</option>
+                      ))
+                    }
+
+                  </select>
+                </div>
+
+              </Col>
+            </Row>
+
+            <Row className="gy-4 gx-4 mb60">
+              {postData.length > 0 && postData?.map((e, i) => (
+
+                <Col lg={4} md={6} xs={12} key={i}>
+                  <div className="blogWrapper radius12 pb15 transition position-relative">
+                    {/* <div className="featuredImg">
               <Link to={`/blog/${e?.slug}`}> <img
                   src={e?.x_featured_media_medium}
                   className="img-fluid w-100"
@@ -200,62 +240,47 @@ const BlogItems = () => {
                 /></Link>
                
               </div> */}
-          
-                <div className="text-start pt20 pb20 pl20 pr20">
-                <div className="iconCat d-flex align-items-center mb20">
-                <img src={e?.acf?.icon?.url} className="img-fluid" alt="category" />
-                <span className="colorBlue fs21 fw600 ml15">
-                  Insights
-                </span>
-              </div>
-                  <h3 className="lh24" title={e?.title?.rendered}>   <Link to={`/blog/${e?.slug}`} className="fs18 fBold colorBlue"> {e?.title?.rendered.slice(0, 33)} ... </Link></h3>
 
-                  <div className="mt8 colorPara" dangerouslySetInnerHTML={{ __html: e?.excerpt?.rendered.slice(0, 200) }} />
+                    <div className="text-start pt20 pb20 pl20 pr20">
+                      <div className="iconCat d-flex align-items-center mb20">
+                        <img src={e?.acf?.icon?.url} className="img-fluid" alt="category" />
+                        {
+                          e?.x_categories && <span className="colorBlue fs21 fw600 ml15">
+                            {e?.x_categories}
+                          </span>
+                        }
+                      </div>
+                      <h3 className="lh24" title={e?.title?.rendered}>   <Link to={`/blog/${e?.slug}`} className="fs18 fBold colorBlue"> {e?.title?.rendered.slice(0, 33)} ... </Link></h3>
 
-               
-                  {/* <div className="d-flex align-items-center">
+                      <div className="mt8 colorPara" dangerouslySetInnerHTML={{ __html: e?.excerpt?.rendered.slice(0, 200) }} />
+
+
+                      {/* <div className="d-flex align-items-center">
                   <span>{timeIcon}</span> <span className="fs14 colorPara ml5">  {dateConverter(e?.modified)}</span>
                 </div> */}
-                </div>
+                    </div>
 
-                <div className="buttonAct position-absolute pl20 pr20 w-100">
-                    <Link to={`/blog/${e?.slug}`} className="btnGreenLight transition">
-                      Read More
-                    </Link>
+                    <div className="buttonAct position-absolute pl20 pr20 w-100">
+                      <Link to={`/blog/${e?.slug}`} className="btnGreenLight transition">
+                        Read More
+                      </Link>
+                    </div>
                   </div>
-              </div>
-            </Col>
-            :
-            <Col lg={4} md={6} xs={12} key={i}>
-              <div className="blogWrapper radius12 pb15 transition">
-                <div className="featuredImg">
-                  <Link to={`/blog/${e?.slug}`}> <img
-                    src={e?.x_featured_media_medium}
-                    className="img-fluid w-100"
-                    alt=""
-                  /></Link>
+                </Col>
 
-                </div>
-                <div className="text-start pt20 pb20 pl20 pr20">
-                  <h3 className="lh24" title={e?.title?.rendered}>   <Link to={`/blog/${e?.slug}`} className="fs18 fBold colorBlue"> {e?.title?.rendered.slice(0, 33)} ... </Link></h3>
+              ))}
+            </Row>
 
-                  <div className="mt8 colorPara" dangerouslySetInnerHTML={{ __html: e?.excerpt?.rendered }} />
-                  <div className="d-flex align-items-center">
-                    <span>{timeIcon}</span> <span className="fs14 colorPara ml5">  {dateConverter(e?.modified)}</span>
-                  </div>
-                </div>
-              </div>
-            </Col>
-        ))}
-      </Row>
+            <Pagination
+              {...bootstrap5PaginationPreset}
+              current={Number(currentPage)}
+              total={Number(totalPage)}
+              onPageChange={setCurrentPageHandle}
 
-      <Pagination
-        {...bootstrap5PaginationPreset}
-        current={Number(currentPage)}
-        total={Number(totalPage)}
-        onPageChange={setCurrentPageHandle}
+            />
+          </>
+      }
 
-      />
     </>
 
   );
