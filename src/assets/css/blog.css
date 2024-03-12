@@ -106,24 +106,20 @@
   bottom: 0;
   left: 0;
   z-index: -1;
-  margin: -5px;
+  margin: -3px;
   border-radius: inherit;
-  background: linear-gradient(to right, red, orange);
+  background: linear-gradient(to bottom, #174D72, transparent);
   }
   .blogWrapper{
       display: flex;
       align-items: center;
-      width: 90%;
       margin: auto;
-      max-width: 22em;
       position: relative;
-      padding: 30% 2em;
       box-sizing: border-box;
-      color: #FFF;
-      background: #000;
+      background: #fff;
         background-clip: border-box;
       background-clip: padding-box;
-      border: solid 5px transparent;
+      border: solid 3px transparent;
       -webkit-border-radius: 1em;
       border-radius: 1em;
   }
