@@ -97,3 +97,33 @@
       background-position: right -40px top 0;
    }
   }
+
+  .blogWrapper::before{
+    content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -5px;
+  border-radius: inherit;
+  background: linear-gradient(to right, red, orange);
+  }
+  .blogWrapper{
+      display: flex;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+      max-width: 22em;
+      position: relative;
+      padding: 30% 2em;
+      box-sizing: border-box;
+      color: #FFF;
+      background: #000;
+        background-clip: border-box;
+      background-clip: padding-box;
+      border: solid 5px transparent;
+      -webkit-border-radius: 1em;
+      border-radius: 1em;
+  }
