@@ -171,7 +171,7 @@ const Navbar = (props) => {
         </ul>
       </li>
       <li>
-        <Link to="/blogs" className="colorPara">
+        <Link to="/blogs" className="colorPara clickToClose">
           Resources
         </Link>
      
