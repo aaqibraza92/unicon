@@ -11,11 +11,11 @@ const Blogs = () => {
         <title>Articles | Unicon</title>
       </Helmet>
       <BreadCrumb
-        title="Insights"
+        title="Resources"
         items={[
           { name: "Home", url: "/" },
           { name: "Resources", url: "/blogs" },
-          { name: "Insights", url: "" },
+          { name: "Resources", url: "" },
         ]}
       />
       <section className="mt30">

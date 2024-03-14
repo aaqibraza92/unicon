@@ -171,20 +171,10 @@ const Navbar = (props) => {
         </ul>
       </li>
       <li>
-        <Link to="#" className="colorPara">
-          Resources <span className="ml5 arrowDown">{angleDownIcon}</span>
+        <Link to="/blogs" className="colorPara">
+          Resources
         </Link>
-        <ul className="subMenu">
-          <li>
-            <Link to="/blogs" className="clickToClose">Articles</Link>
-          </li>
-          <li>
-            <Link to="/category/2" className="clickToClose">Industry Insights</Link>
-          </li>
-          <li>
-            <Link to="/category/3" className="clickToClose">White Papers</Link>
-          </li>
-        </ul>
+     
       </li>
       <li>
         <Link to="/contact-us" className="colorPara clickToClose">

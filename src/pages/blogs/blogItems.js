@@ -231,7 +231,7 @@ const BlogItems = () => {
               {postData.length > 0 && postData?.map((e, i) => (
 
                 <Col lg={4} md={6} xs={12} key={i}>
-                  <div className="blogWrapper radius12 pb15 transition position-relative">
+                  <div className="blogWrapper radius12 pb15 transition position-relative" style={{borderColor: e?.acf?.choose_color}}>
                     {/* <div className="featuredImg">
               <Link to={`/blog/${e?.slug}`}> <img
                   src={e?.x_featured_media_medium}

@@ -16,14 +16,13 @@
     border-radius: 12px;
     min-height: 320px;
     border-style: solid;
-    border-image: linear-gradient(#174D72, transparent) 30;
   }
   .featuredImg img {
     -webkit-border-radius: 12px 12px 0 0;
     border-radius: 12px 12px 0 0;
   }
   .blogWrapper:hover {
-    border-color: var(--colorGreen);
+    border-color: var(--colorGreen) !important;
   }
   .active > .page-link, .page-link.active {
     background: var(--colorGreen) !important;
@@ -98,7 +97,7 @@
    }
   }
 
-  .blogWrapper::before{
+  /* .blogWrapper::before{
     content: "";
   position: absolute;
   top: 0;
@@ -122,4 +121,4 @@
       border: solid 3px transparent;
       -webkit-border-radius: 1em;
       border-radius: 1em;
-  }
+  } */
