@@ -245,7 +245,7 @@ const BlogItems = () => {
                       <div className="iconCat d-flex align-items-center mb20">
                         <img src={e?.acf?.icon?.url} className="img-fluid" alt="category" />
                         {
-                          e?.x_categories && <span className="colorBlue fs21 fw600 ml15">
+                          e?.x_categories && <span className="colorBlue fs21 fw600 ml15" style={{color: e?.acf?.choose_color}}>
                             {e?.x_categories}
                           </span>
                         }
