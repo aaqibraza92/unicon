@@ -202,18 +202,11 @@ const BlogItems = () => {
 
 
       </section> */}
-
-      {
-        loading ? <Row className="gy-4 mb-5"> {Array(8).fill().map((e, i) => (
-          <Col key={i} lg={4} md={4} sm={4}><div className="skeleton" style={{ height: "300px" }}></div></Col>
-
-        ))}</Row> :
-          <>
-
-            <Row>
+         <Row>
               <Col lg={4} md={6} xs={12}>
                 <div className="mb30 mt30 position-relative selBox">
                   <select name="Data" id="" className="form-control" onChange={(e) => setcatHandle(e.target.value)}>
+                  <option value="">All Topics</option>
                     {
                       allCategory.length > 0 && allCategory.map((e, i) => (
                         e.name !== 'Uncategorized' &&
@@ -226,6 +219,15 @@ const BlogItems = () => {
 
               </Col>
             </Row>
+
+      {
+        loading ? <Row className="gy-4 mb-5"> {Array(8).fill().map((e, i) => (
+          <Col key={i} lg={4} md={4} sm={4}><div className="skeleton" style={{ height: "300px" }}></div></Col>
+
+        ))}</Row> :
+          <>
+
+         
 
             <Row className="gy-4 gx-4 mb60">
               {postData.length > 0 && postData?.map((e, i) => (
