@@ -65,7 +65,7 @@ const Header = () => {
             <Link to="/">
               <img
                 className="img-fluid mainLogo"
-                src={require("../../assets/img/logo.png")}
+                src={require("../../assets/img/footer_logo.png")}
                 alt="logo"
               />
             </Link>
