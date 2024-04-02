@@ -252,7 +252,7 @@ const BlogItems = () => {
                           </span>
                         }
                       </div>
-                      <h3 className="lh24" title={e?.title?.rendered}>   <Link to={`/blog/${e?.slug}`} className="fs18 fBold colorBlue"> {e?.title?.rendered.slice(0, 33)} ... </Link></h3>
+                      <h3 className="lh24" title={e?.title?.rendered}>   <Link to={`/blog/${e?.slug}`} className="fs18 fBold colorBlue" style={{color: e?.acf?.choose_color}}> {e?.title?.rendered.slice(0, 33)} ... </Link> </h3>
 
                       <div className="mt8 colorPara" dangerouslySetInnerHTML={{ __html: e?.excerpt?.rendered.slice(0, 200) }} />
 
@@ -262,8 +262,8 @@ const BlogItems = () => {
                 </div> */}
                     </div>
 
-                    <div className="buttonAct position-absolute pl20 pr20 w-100">
-                      <Link to={`/blog/${e?.slug}`} className="btnGreenLight transition">
+                    <div className="buttonAct position-absolute pl20 pr20 w-100"  >
+                      <Link to={`/blog/${e?.slug}`} style={{backgroundColor: e?.acf?.choose_color}}  className="btnGreenLight text-white transition" >
                         Read More
                       </Link>
                     </div>

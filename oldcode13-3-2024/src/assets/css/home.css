@@ -1,0 +1,97 @@
+  .wrapperArea {
+    background: #fff;
+    border: 2px solid transparent;
+    padding: 20px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    transition: all 0.5s;
+  }
+  .wrapperArea:hover {
+    border-color: var(--colorGreen);
+  }
+  .bgTestimonial{
+    background: url('../../assets/img/testi.jpg') ;
+    background-size: cover;
+
+  }
+  .practicalArea{
+    background: url('../../assets/img/area_bg.jpg') ;
+    background-size: cover;
+
+  }
+  .testimonialWrapper img {
+    width: 50px;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+  }
+  .halfBlue{
+    color: #1B2B40BF;
+  }
+  .counterSection {
+    padding: 80px 0;
+  }
+  .intro-content hr {
+    background: linear-gradient(90deg, rgba(4,80,140,1) 52%, rgba(4,80,140,1) 52%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
+    border: 0;
+    position: relative;
+    left: calc(-6.8rem - 15px);
+    z-index: 9;
+    height: 2.4px;
+    opacity: 1;
+}
+@media only screen and (max-width:990px) and (min-width:768px) {
+  .mt80Tab{
+    margin-top: 80px;
+  }
+body .tabfs24{
+  font-size: 24px;
+}
+.intro-content{
+  margin-top: 15px;
+}
+.single_bg .contentArea h2 {
+  padding: 0 20px;
+}
+}
+@media only screen and (max-width:767px) {
+  .single_bg .contentArea h2 {
+    font-size: 20px;
+    line-height: 27px;
+    padding: 0 20px;
+  }
+  .wrapperArea img {
+    width: 29px;
+  }
+  .mobFullWidth {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .homeBanner {
+    height: 200px;
+  }
+  .homeBanner img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .counterSection {
+    padding: 40px 0;
+  }
+}
+
+
+.swiper-button-prev::after{
+  background: url('../img/arrow_left.svg') !important;
+  background-repeat: no-repeat !important;
+  content: "" !important;
+  height: 30px;
+width: 50px;
+}
+.swiper-button-next::after{
+  background: url('../img/arrow_right.svg') !important;
+  background-repeat: no-repeat !important;
+  content: "" !important;
+  height: 30px;
+width: 50px;
+}
