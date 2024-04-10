@@ -55,7 +55,7 @@ const LookingForTalent = () => {
       },
     };
 
-    axios.post(CONTACT_FORM + 100 + "/feedback", iData, options).then((res) => {
+    axios.post(CONTACT_FORM + 232 + "/feedback", iData, options).then((res) => {
       if (res && res.status===200) {
         clearfeilds();
         notify(res?.data?.message);
