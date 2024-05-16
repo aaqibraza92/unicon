@@ -15,7 +15,7 @@ let data = [
   "CDISC and ADaM Submission-ready Dataset Development ",
   "Analysis Dataset Development and Quality Control for Integrated Summaries of Safety (ISS) and Integrated Summaries of Efficacy (ISE)",
   "Tables, Listings, and Figures Development ",
-  "ables, Listings, and Figures Development and Quality Control for ISS and ISE.",
+  "Tables, Listings, and Figures Development and Quality Control for ISS and ISE.",
 ];
 
 let data2 = [
