@@ -105,17 +105,17 @@ const UniconPharmaCareers = () => {
             consulting team, view the opportunities below and send your
             resume/CV to:
             <a
-              href="mailto:careers@uniconpharma"
+              href="mailto:careers@uniconpharma.com"
               className="colorBlue"
               target="_blank"
               rel="noopener noreferrer"
             >
               {" "}
-              careers@uniconpharma.
+              careers@uniconpharma.com
             </a>
           </p>
           <p className="fs16 colorPara">
-            com We also rely on our employees to help us identify top talent. To
+            We also rely on our employees to help us identify top talent. To
             encourage your efforts, all employees are eligible for our employee
             referral program. You will receive a one-time referral bonus if the
             candidate is hired by the company.
